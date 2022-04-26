@@ -1,16 +1,19 @@
-import tensorflow as tf
-import numpy as np
-import matplotlib.pyplot as plt
-import time
+#%% Improt required packages
+
+
 import scipy.io
 import math
-import matplotlib.gridspec as gridspec
-from plotting import newfig
-from mpl_toolkits.axes_grid1 import make_axes_locatable
-from tensorflow import keras
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Input
-from tensorflow.keras import layers, activations
-from scipy.interpolate import griddata
-from eager_lbfgs import lbfgs, Struct
-from pyDOE import lhs
+import tensordiffeq as tdq
+from tensordiffeq.models import CollocationSolverND
+from tensordiffeq.boundaries import *
+
+#%% Define Domain
+
+Domain = DomainND(["x", "y", "t"], time_var="t")
+
+Domain.add("x", [0, 1.0], 101)
+Domain.add("y", [0, 1.0], 101)
+Domain.add("t", [0, 6.0], 110)
+
+N_f = 100000
+Domain.generate_collocation_points(N_f)
