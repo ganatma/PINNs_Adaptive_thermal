@@ -235,6 +235,237 @@ def grad(
         grads_ulb = tape.gradient(loss_value, weights_ulb)
         grads_lrb = tape.gradient(loss_value, weights_lrb)
 
+    return (
+        loss_value,
+        loss_data,
+        loss_0,
+        loss_colloc,
+        loss_ulb,
+        loss_lrb,
+        grads,
+        grads_data,
+        grads_0,
+        grads_colloc,
+        grads_ulb,
+        grads_lrb,
+    )
 
-    return loss_value, loss_data, loss_0, loss_colloc, loss_ulb, loss_lrb, grads, grads_data, grads_0, grads_colloc, grads_ulb, grads_lrb
 
+#%% Fit functio
+
+
+def fit(
+    x_data,
+    y_data,
+    t_data,
+    T_data,
+    x_0,
+    y_0,
+    t_0,
+    T_0,
+    x_colloc,
+    y_colloc,
+    t_colloc,
+    x_ulb,
+    y_ulb,
+    t_ulb,
+    x_lrb,
+    y_lrb,
+    t_lrb,
+    weights_data,
+    weights_0,
+    weights_colloc,
+    weights_ulb,
+    weights_lrb,
+    tf_iter,
+    newton_iter,
+):
+    batch_sz = 1024
+    n_batches = N_colloc // batch_sz
+
+    start_time = time.time()
+
+    # create optimizers for network weights and
+    tf_optimizer = tf.keras.optimizers.Adam(lr=0.001, beta_1=0.99)
+    tf_optimizer_weights = tf.keras.optimizers.Adam(lr=0.005, beta_1=0.99)
+
+    # ADAM optimization
+    print("Starting ADAM training")
+
+    for epoch in range(tf_iter):
+        for i in range(n_batches):
+
+            x_data_batch = x_data[
+                i * batch_sz : (i * batch_sz + batch_sz),
+            ]
+            y_data_batch = y_data[
+                i * batch_sz : (i * batch_sz + batch_sz),
+            ]
+            t_data_batch = t_data[
+                i * batch_sz : (i * batch_sz + batch_sz),
+            ]
+            T_data_batch = T_data[
+                i * batch_sz : (i * batch_sz + batch_sz),
+            ]
+
+            x_colloc_batch = x_colloc[
+                i * batch_sz : (i * batch_sz + batch_sz),
+            ]
+            y_colloc_batch = y_colloc[
+                i * batch_sz : (i * batch_sz + batch_sz),
+            ]
+            t_colloc_batch = t_colloc[
+                i * batch_sz : (i * batch_sz + batch_sz),
+            ]
+
+            (
+                loss_value,
+                loss_data,
+                loss_0,
+                loss_colloc,
+                loss_ulb,
+                loss_lrb,
+                grads,
+                grads_data,
+                grads_0,
+                grads_colloc,
+                grads_ulb,
+                grads_lrb,
+            ) = grad(
+                u_model,
+                x_data_batch,
+                y_data_batch,
+                t_data_batch,
+                T_data_batch,
+                x_0,
+                y_0,
+                t_0,
+                T_0,
+                x_colloc_batch,
+                y_colloc_batch,
+                t_colloc_batch,
+                x_ulb,
+                y_ulb,
+                t_ulb,
+                x_lrb,
+                y_lrb,
+                t_lrb,
+                weights_data,
+                weights_0,
+                weights_colloc,
+                weights_ulb,
+                weights_lrb,
+            )
+
+            tf_optimizer.apply_gradients(zip(grads, u_model.trainable_variables))
+            tf_optimizer_weights.apply_gradients(
+                zip(
+                    [-grads_data, -grads_0, -grads_colloc, -grads_ulb, -grads_lrb],
+                    [weights_data, weights_0, weights_colloc, weights_ulb, weights_lrb],
+                )
+            )
+
+        if epoch % 100 == 0:
+            elapsed = time.time() - start_time
+            print("It: %d, Time: %.2f" % (epoch, elapsed))
+            tf.print(
+                f"mse_data: {loss_data}, mse_0: {loss_0}, mse_colloc: {loss_colloc}, mse_b: {loss_ulb+loss_lrb}, Total Loss: {loss_value}"
+            )
+            start_time = time.time()
+
+    # L-BFGS optimization
+    print("Starting L_BFGS training")
+
+    loss_and_flat_grad = get_loss_and_flat_grad(
+        x_data_batch,
+        y_data_batch,
+        t_data_batch,
+        T_data_batch,
+        x_0,
+        y_0,
+        t_0,
+        T_0,
+        x_colloc_batch,
+        y_colloc_batch,
+        t_colloc_batch,
+        x_ulb,
+        y_ulb,
+        t_ulb,
+        x_lrb,
+        y_lrb,
+        t_lrb,
+        weights_data,
+        weights_0,
+        weights_colloc,
+        weights_ulb,
+        weights_lrb,
+    )
+
+    lbfgs(
+        loss_and_flat_grad,
+        get_weights(u_model),
+        Struct(),
+        maxIter=newton_iter,
+        learningRate=0.8,
+    )
+
+
+def get_loss_and_flat_grad(
+    x_data_batch,
+    y_data_batch,
+    t_data_batch,
+    T_data_batch,
+    x_0,
+    y_0,
+    t_0,
+    T_0,
+    x_colloc_batch,
+    y_colloc_batch,
+    t_colloc_batch,
+    x_ulb,
+    y_ulb,
+    t_ulb,
+    x_lrb,
+    y_lrb,
+    t_lrb,
+    weights_data,
+    weights_0,
+    weights_colloc,
+    weights_ulb,
+    weights_lrb,
+):
+    def loss_and_flat_grad(w):
+        with tf.GradientTape() as tape:
+            set_weights(u_model, w, sizes_w, sizes_b)
+            loss_value, _, _, _, _, _ = loss(
+                x_data_batch,
+                y_data_batch,
+                t_data_batch,
+                T_data_batch,
+                x_0,
+                y_0,
+                t_0,
+                T_0,
+                x_colloc_batch,
+                y_colloc_batch,
+                t_colloc_batch,
+                x_ulb,
+                y_ulb,
+                t_ulb,
+                x_lrb,
+                y_lrb,
+                t_lrb,
+                weights_data,
+                weights_0,
+                weights_colloc,
+                weights_ulb,
+                weights_lrb,
+            )
+        grad = tape.gradient(loss_value, u_model.trainable_variables)
+        grad_flat = []
+        for g in grad:
+            grad_flat.append(tf.reshape(g, [-1]))
+        grad_flat = tf.concat(grad_flat, 0)
+        return loss_value, grad_flat
+
+    return loss_and_flat_grad
