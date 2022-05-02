@@ -515,13 +515,6 @@ class dataprep:
         self.dataset = np.concatenate((self.coords_upd, self.temp_upd), 1)
         return self.dataset
 
-    def minibatch(self, batchsize=128):
-        rand_idx = np.random.choice(
-            self.dataset.shape[0], size=batchsize, replace=False
-        )
-        batch = self.dataset[rand_idx, :]
-        return batch
-
 #%%
 batch_size = 256
 N_colloc = 200000
@@ -541,8 +534,10 @@ X_dataset_batch = X_dataset.shuffle(buffer_size=1000).take(N_data).batch(batch_s
 temp0_data = dataprep(1)
 X_0_coords = temp_data.getCoords(xmin = 0.01, xmax = 0.99, ymin = 0.01, ymax = 0.99, tmin = 0, num_x = 99, num_y = 99, num_t = 1)
 X_0 = temp_data.getTemps(X_0_coords)
-X_0 = tf.data.Dataset.from_tensor_slices(X_0)
-X_0 = X_0.shuffle(buffer_size=1000).take(N_initial)
+idx = np.random.randint(X_0.shape[0], size=N_initial)
+X_0 = X_0[idx,:]
+# X_0 = tf.data.Dataset.from_tensor_slices(X_0)
+# X_0 = X_0.shuffle(buffer_size=1000).take(N_initial).batch(batch_size)
 
 # Collocation Dataset
 lb = np.array([0, 0, 0])
@@ -555,18 +550,43 @@ X_colloc_batch = X_colloc.shuffle(buffer_size=1000).take(N_colloc).batch(batch_s
 tempul_data = dataprep(1)
 X_ul_coords = temp_data.getCoords(xmin = 0.01, xmax = 0.99, ymin = 0, ymax = 1, tmin = 0.0555, num_x = 99, num_y = 2, num_t = 88)
 X_ul = temp_data.getTemps(X_ul_coords)
-X_ul = tf.data.Dataset.from_tensor_slices(X_ul)
-X_ul = X_ul.shuffle(buffer_size=1000).take(N_boundary)
+idx = np.random.randint(X_ul.shape[0], size=N_boundary)
+X_ul = X_ul[idx,:]
+# X_ul = tf.data.Dataset.from_tensor_slices(X_ul)
+# X_ul = X_ul.shuffle(buffer_size=1000).take(N_boundary)
 
 # Left right Boundary Dataset
 templr_data = dataprep(1)
 X_lr_coords = temp_data.getCoords(xmin = 0, xmax = 1, ymin = 0.01, ymax = 0.99, tmin = 0.0555, num_x = 2, num_y = 99, num_t = 88)
 X_lr = temp_data.getTemps(X_lr_coords)
-X_lr = tf.data.Dataset.from_tensor_slices(X_lr)
-X_lr = X_lr.shuffle(buffer_size=1000).take(N_boundary)
+idx = np.random.randint(X_lr.shape[0], size=N_boundary)
+X_lr = X_lr[idx,:]
+# X_lr = tf.data.Dataset.from_tensor_slices(X_lr)
+# X_lr = X_lr.shuffle(buffer_size=1000).take(N_boundary)
 
 X_data_colloc_batch = tf.data.Dataset.zip((X_dataset_batch,X_colloc_batch))
 
+weights_data = tf.Variable(tf.random.uniform([N_data, 1]))
+weights_0 = tf.Variable(100*tf.random.uniform([N_initial, 1]))
+weights_colloc = tf.Variable(tf.random.uniform([N_colloc, 1]))
+weights_ulb = tf.Variable(tf.random.uniform([N_boundary, 1]))
+weights_lrb = tf.Variable(tf.random.uniform([N_boundary, 1]))
+tf_iter = 200000
+newton_iter = 50000
 
+# %% Training PINN
 
+fit(    
+    X_data_colloc_batch,
+    X_0,
+    X_ul,
+    X_lr,
+    weights_data,
+    weights_0,
+    weights_colloc,
+    weights_ulb,
+    weights_lrb,
+    tf_iter,
+    newton_iter,
+)
 # %%
