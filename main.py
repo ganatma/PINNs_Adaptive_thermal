@@ -16,6 +16,10 @@ from tensorflow.keras import layers, activations
 from scipy.interpolate import griddata
 from eager_lbfgs import lbfgs, Struct
 from pyDOE import lhs
+import netCDF4
+from scipy import interpolate
+%matplotlib qt
+
 
 #%% Defining size of network
 
@@ -469,3 +473,56 @@ def get_loss_and_flat_grad(
         return loss_value, grad_flat
 
     return loss_and_flat_grad
+
+
+#%% Predict function
+
+
+def predict(x, y, t):
+    T_star = u_model(tf.concat([x, y, t], 1))
+    f_T_star = f_model(x, y, t)
+
+    return T_star.numpy(), f_T_star.numpy()
+
+#%% Dataprep class
+
+class dataprep:
+    # Initialize class
+    def __init__(self, xmax, tmax, filename="function_heat_source_out_SS_final.e"):
+        nc = netCDF4.Dataset(filename)
+        temps = nc.variables["vals_nod_var1"]
+        temps = np.array(temps)
+        self.temp = temps.reshape((110, 6, 101, 101))
+        x = np.linspace(0, xmax, 101)
+        y = np.linspace(0, xmax, 101)
+        t = np.linspace(0, 5.994, 109)
+        t = np.append(t,6)
+        self.temp_func = interpolate.RegularGridInterpolator(
+            (t, x, y), self.temp[:, 5, :, :]
+        )
+
+    def getCoords(self, xmin, xmax, ymin, ymax, tmin, num_x, num_y, num_t):
+        # num_x, num_y: number per edge
+        # num_t: number time step
+
+        x = np.linspace(xmin, xmax, num=num_x)
+        y = np.linspace(ymin, ymax, num=num_y)
+        t = np.linspace(tmin, tmin+((num_t-1)*0.0555), num=num_t)
+        xxx, yyy, ttt = np.meshgrid(x, y, t)
+        xxx = xxx.flatten()[:, None]
+        yyy = yyy.flatten()[:, None]
+        ttt = ttt.flatten()[:, None]
+
+        return np.concatenate((ttt, xxx, yyy), 1)
+
+    def getTemps(self, coords, temp_cutoff=20000):
+        temp_fromfunc = self.temp_func(coords).flatten()[:, None]
+        # Get indices of those points whose temepratures are less than 3000K
+        idx = np.where(temp_fromfunc <= temp_cutoff)[0]
+        self.temp_upd = temp_fromfunc[idx]
+        self.coords_upd = coords[idx]
+        self.dataset = np.concatenate((self.coords_upd, self.temp_upd), 1)
+        return self.dataset
+
+temp_data = dataprep(1,6)
+X_data = temp_data.getCoords(xmin = 0.01, xmax = 0.99, ymin = 0.01, ymax = 0.99, tmin = 0.0555, num_x = 99, num_y = 99, num_t = 88)
