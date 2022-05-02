@@ -82,6 +82,7 @@ u_model = neural_net(layer_sizes)
 
 
 def loss(
+    f_model,
     x_data_batch,
     y_data_batch,
     t_data_batch,
@@ -182,7 +183,6 @@ def u_derv_lrb_model(u_model, x, y, t):
 
 
 def grad(
-    model,
     x_data_batch,
     y_data_batch,
     t_data_batch,
@@ -255,27 +255,14 @@ def grad(
     )
 
 
-#%% Fit functio
+#%% Fit function
 
 
 def fit(
-    x_data,
-    y_data,
-    t_data,
-    T_data,
-    x_0,
-    y_0,
-    t_0,
-    T_0,
-    x_colloc,
-    y_colloc,
-    t_colloc,
-    x_ulb,
-    y_ulb,
-    t_ulb,
-    x_lrb,
-    y_lrb,
-    t_lrb,
+    X_data_colloc_batch,
+    X_0,
+    X_ul,
+    X_lr,
     weights_data,
     weights_0,
     weights_colloc,
@@ -284,44 +271,46 @@ def fit(
     tf_iter,
     newton_iter,
 ):
-    batch_sz = 1024
-    n_batches = N_colloc // batch_sz
 
     start_time = time.time()
-
     # create optimizers for network weights and
     tf_optimizer = tf.keras.optimizers.Adam(lr=0.001, beta_1=0.99)
     tf_optimizer_weights = tf.keras.optimizers.Adam(lr=0.005, beta_1=0.99)
+    iterator = iter(X_0)
+    ckpt = tf.train.Checkpoint(step=tf.Variable(1), optimizer=tf_optimizer, net=u_model, iterator=iterator)
+    manager = tf.train.CheckpointManager(ckpt, './tf_ckpts', max_to_keep=10)
+    x_0 = X_0[:,1]
+    y_0 = X_0[:,2]
+    t_0 = X_0[:,0]
+    T_0 = X_0[:,3]
+
+    x_ulb = X_ul[:,1]
+    y_ulb = X_ul[:,2]
+    t_ulb = X_ul[:,0]
+
+    x_lrb = X_lr[:,1]
+    y_lrb = X_lr[:,2]
+    t_lrb = X_lr[:,0]
 
     # ADAM optimization
     print("Starting ADAM training")
 
+    ckpt.restore(manager.latest_checkpoint)
+    if manager.latest_checkpoint:
+        print("Restored from {}".format(manager.latest_checkpoint))
+    else:
+        print("Initializing from scratch.")
     for epoch in range(tf_iter):
-        for i in range(n_batches):
+        for X_data_batch, X_colloc_batch in range(X_data_colloc_batch):
 
-            x_data_batch = x_data[
-                i * batch_sz : (i * batch_sz + batch_sz),
-            ]
-            y_data_batch = y_data[
-                i * batch_sz : (i * batch_sz + batch_sz),
-            ]
-            t_data_batch = t_data[
-                i * batch_sz : (i * batch_sz + batch_sz),
-            ]
-            T_data_batch = T_data[
-                i * batch_sz : (i * batch_sz + batch_sz),
-            ]
+            x_data_batch = X_data_batch[:,1]
+            y_data_batch = X_data_batch[:,2]
+            t_data_batch = X_data_batch[:,0]
+            T_data_batch = X_data_batch[:,3]
 
-            x_colloc_batch = x_colloc[
-                i * batch_sz : (i * batch_sz + batch_sz),
-            ]
-            y_colloc_batch = y_colloc[
-                i * batch_sz : (i * batch_sz + batch_sz),
-            ]
-            t_colloc_batch = t_colloc[
-                i * batch_sz : (i * batch_sz + batch_sz),
-            ]
-
+            x_colloc_batch = X_colloc_batch[:,1]
+            y_colloc_batch = X_colloc_batch[:,2]
+            t_colloc_batch = X_colloc_batch[:,0]
             (
                 loss_value,
                 loss_data,
@@ -336,7 +325,6 @@ def fit(
                 grads_ulb,
                 grads_lrb,
             ) = grad(
-                u_model,
                 x_data_batch,
                 y_data_batch,
                 t_data_batch,
@@ -369,12 +357,15 @@ def fit(
                 )
             )
 
+        ckpt.step.assign_add(1)
         if epoch % 100 == 0:
             elapsed = time.time() - start_time
             print("It: %d, Time: %.2f" % (epoch, elapsed))
             tf.print(
                 f"mse_data: {loss_data}, mse_0: {loss_0}, mse_colloc: {loss_colloc}, mse_b: {loss_ulb+loss_lrb}, Total Loss: {loss_value}"
             )
+            save_path = manager.save()
+            print("Saved checkpoint for step {}: {}".format(int(ckpt.step), save_path))
             start_time = time.time()
 
     # L-BFGS optimization
@@ -488,7 +479,7 @@ def predict(x, y, t):
 
 class dataprep:
     # Initialize class
-    def __init__(self, xmax, tmax, filename="function_heat_source_out_SS_final.e"):
+    def __init__(self, xmax, filename="function_heat_source_out_SS_final.e"):
         nc = netCDF4.Dataset(filename)
         temps = nc.variables["vals_nod_var1"]
         temps = np.array(temps)
@@ -524,5 +515,58 @@ class dataprep:
         self.dataset = np.concatenate((self.coords_upd, self.temp_upd), 1)
         return self.dataset
 
-temp_data = dataprep(1,6)
-X_data = temp_data.getCoords(xmin = 0.01, xmax = 0.99, ymin = 0.01, ymax = 0.99, tmin = 0.0555, num_x = 99, num_y = 99, num_t = 88)
+    def minibatch(self, batchsize=128):
+        rand_idx = np.random.choice(
+            self.dataset.shape[0], size=batchsize, replace=False
+        )
+        batch = self.dataset[rand_idx, :]
+        return batch
+
+#%%
+batch_size = 256
+N_colloc = 200000
+N_data = 200000
+N_initial = 5000
+N_boundary = 5000
+
+# Dataset with ground truth
+temp_data = dataprep(1)
+X_data_coords = temp_data.getCoords(xmin = 0.01, xmax = 0.99, ymin = 0.01, ymax = 0.99, tmin = 0.0555, num_x = 99, num_y = 99, num_t = 88)
+X_data = temp_data.getTemps(X_data_coords)
+X_dataset = tf.data.Dataset.from_tensor_slices(X_data)
+X_dataset_batch = X_dataset.shuffle(buffer_size=1000).take(N_data).batch(batch_size)
+
+
+# Intitial Conditions dataset
+temp0_data = dataprep(1)
+X_0_coords = temp_data.getCoords(xmin = 0.01, xmax = 0.99, ymin = 0.01, ymax = 0.99, tmin = 0, num_x = 99, num_y = 99, num_t = 1)
+X_0 = temp_data.getTemps(X_0_coords)
+X_0 = tf.data.Dataset.from_tensor_slices(X_0)
+X_0 = X_0.shuffle(buffer_size=1000).take(N_initial)
+
+# Collocation Dataset
+lb = np.array([0, 0, 0])
+ub = np.array([4.88, 1, 1])
+X_colloc = lb + (ub-lb)*lhs(3, N_colloc)
+X_colloc = tf.data.Dataset.from_tensor_slices(X_colloc)
+X_colloc_batch = X_colloc.shuffle(buffer_size=1000).take(N_colloc).batch(batch_size)
+
+# Upper Lower Bundary Dataset
+tempul_data = dataprep(1)
+X_ul_coords = temp_data.getCoords(xmin = 0.01, xmax = 0.99, ymin = 0, ymax = 1, tmin = 0.0555, num_x = 99, num_y = 2, num_t = 88)
+X_ul = temp_data.getTemps(X_ul_coords)
+X_ul = tf.data.Dataset.from_tensor_slices(X_ul)
+X_ul = X_ul.shuffle(buffer_size=1000).take(N_boundary)
+
+# Left right Boundary Dataset
+templr_data = dataprep(1)
+X_lr_coords = temp_data.getCoords(xmin = 0, xmax = 1, ymin = 0.01, ymax = 0.99, tmin = 0.0555, num_x = 2, num_y = 99, num_t = 88)
+X_lr = temp_data.getTemps(X_lr_coords)
+X_lr = tf.data.Dataset.from_tensor_slices(X_lr)
+X_lr = X_lr.shuffle(buffer_size=1000).take(N_boundary)
+
+X_data_colloc_batch = tf.data.Dataset.zip((X_dataset_batch,X_colloc_batch))
+
+
+
+# %%
