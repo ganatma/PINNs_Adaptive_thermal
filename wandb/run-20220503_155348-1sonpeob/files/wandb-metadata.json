@@ -1,0 +1,24 @@
+{
+    "os": "Windows-10-10.0.22000-SP0",
+    "python": "3.7.10",
+    "heartbeatAt": "2022-05-03T20:53:53.820268",
+    "startedAt": "2022-05-03T20:53:48.485271",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "c:\\Research\\PINNs_Adaptive_thermal\\main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/ganatma/PINNs_Adaptive_thermal.git",
+        "commit": "059ad6387143cb00c65d12b16d880181f647c937"
+    },
+    "email": "55006398+ganatma@users.noreply.github.com",
+    "root": "c:/Research/PINNs_Adaptive_thermal",
+    "host": "Ganatma",
+    "username": "ganat",
+    "executable": "C:\\Users\\ganat\\Anaconda3\\envs\\tf24\\python.exe"
+}

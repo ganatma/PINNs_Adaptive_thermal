@@ -1,0 +1,11 @@
+2022-05-03 17:25:56,358 INFO    MainThread:87140 [internal.py:wandb_internal():93] W&B internal server running at pid: 87140, started at: 2022-05-03 17:25:56.357883
+2022-05-03 17:25:56,361 INFO    WriterThread:87140 [datastore.py:open_for_write():75] open: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_172553-eyxip1tm\run-eyxip1tm.wandb
+2022-05-03 17:25:56,366 DEBUG   SenderThread:87140 [sender.py:send():232] send: header
+2022-05-03 17:25:56,366 DEBUG   SenderThread:87140 [sender.py:send():232] send: run
+2022-05-03 17:25:56,574 DEBUG   HandlerThread:87140 [handler.py:handle_request():141] handle_request: check_version
+2022-05-03 17:25:56,583 INFO    SenderThread:87140 [dir_watcher.py:__init__():197] watching files in: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_172553-eyxip1tm\files
+2022-05-03 17:25:56,584 INFO    SenderThread:87140 [sender.py:_start_run_threads():814] run started: eyxip1tm with start time 1651616753
+2022-05-03 17:25:56,584 DEBUG   SenderThread:87140 [sender.py:send():232] send: summary
+2022-05-03 17:25:56,585 INFO    SenderThread:87140 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-03 17:25:56,585 DEBUG   SenderThread:87140 [sender.py:send_request():246] send_request: check_version
+2022-05-03 17:25:56,665 DEBUG   HandlerThread:87140 [handler.py:handle_request():141] handle_request: run_start

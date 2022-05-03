@@ -18,8 +18,12 @@ from eager_lbfgs import lbfgs, Struct
 from pyDOE import lhs
 import netCDF4
 from scipy import interpolate
+import wandb
 %matplotlib qt
 
+#%% Wandb
+
+wandb.init(project="sa-pinns")
 
 #%% Defining size of network
 
@@ -107,9 +111,6 @@ def loss(
 ):
     # Loss_data component
     T_data_pred = u_model(tf.concat([x_data_batch, y_data_batch, t_data_batch], 1))
-    print(T_data_pred.dtype)
-    print(T_data_batch.dtype)
-    print(weights_data.dtype)
     mse_data_sa = tf.reduce_mean(tf.square(weights_data * (T_data_batch - T_data_pred)))
     mse_data = tf.reduce_mean(tf.square((T_data_batch - T_data_pred)))
 
@@ -294,6 +295,15 @@ def fit(
     y_lrb = np.reshape(X_lr[:,2],(-1,1))
     t_lrb = np.reshape(X_lr[:,0],(-1,1))
 
+    X_test_data = dataprep(1)
+    X_test_coords = X_test_data.getCoords(xmin = 0, xmax = 1, ymin = 0, ymax = 1, tmin = 4.95, num_x = 101, num_y = 101, num_t = 1)
+    X_test = X_test_data.getTemps(X_test_coords)
+
+    T_test = np.reshape(X_test[:,3],(-1,1))
+    x_test = np.reshape(X_test[:,1],(-1,1))
+    y_test = np.reshape(X_test[:,2],(-1,1))
+    t_test = np.reshape(X_test[:,0],(-1,1))
+
     # ADAM optimization
     print("Starting ADAM training")
 
@@ -370,8 +380,16 @@ def fit(
             )
             save_path = manager.save()
             print("Saved checkpoint for step {}: {}".format(int(ckpt.step), save_path))
+            wandb.log({"epoch":epoch,"loss_data":loss_data,"loss_0": loss_0, "loss_colloc":loss_colloc,"loss_b":loss_ulb+loss_lrb,"Total_loss":loss_value})
             start_time = time.time()
-            
+        
+        if epoch % 100 == 0:
+            T_test_pred = predict(x_test,y_test,t_test)
+            test_error = tf.keras.losses.MeanSquaredError(T_test, T_test_pred).numpy()
+            print("Test error at epoch: %d is %d", (epoch, test_error))
+            test_pred_image = wandb.Image(np.reshape(T_test_pred,(101,101),"F"),caption="Prediction at t= 4.95 s")
+            test_image = wandb.Image(np.reshape(T_test,(101,101),"F"),caption="Truth at t= 4.95 s")
+            wandb.log({"Prediction":test_pred_image, "Truth": test_image})
 
     # L-BFGS optimization
     #print("Starting L_BFGS training")
@@ -573,7 +591,7 @@ X_data_colloc_batch = tf.data.Dataset.zip((X_dataset_batch,X_colloc_batch))
 
 weights_data = []
 weights_colloc = []
-for i in range(N_colloc/batch_size):
+for i in range(int(N_colloc/batch_size)):
     weights_data.append(tf.Variable(tf.random.uniform([batch_size, 1], dtype = 'float64')))
     weights_colloc.append(tf.Variable(tf.random.uniform([batch_size, 1], dtype = 'float64')))
 weights_0 = tf.Variable(100*tf.random.uniform([N_initial, 1], dtype = 'float64'))
