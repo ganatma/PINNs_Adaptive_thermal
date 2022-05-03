@@ -1,0 +1,11 @@
+2022-05-03 18:27:25,541 INFO    MainThread:78380 [internal.py:wandb_internal():93] W&B internal server running at pid: 78380, started at: 2022-05-03 18:27:25.541637
+2022-05-03 18:27:25,543 INFO    WriterThread:78380 [datastore.py:open_for_write():75] open: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_182723-vrnnskx1\run-vrnnskx1.wandb
+2022-05-03 18:27:25,547 DEBUG   SenderThread:78380 [sender.py:send():232] send: header
+2022-05-03 18:27:25,547 DEBUG   SenderThread:78380 [sender.py:send():232] send: run
+2022-05-03 18:27:25,767 DEBUG   HandlerThread:78380 [handler.py:handle_request():141] handle_request: check_version
+2022-05-03 18:27:25,773 INFO    SenderThread:78380 [dir_watcher.py:__init__():197] watching files in: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_182723-vrnnskx1\files
+2022-05-03 18:27:25,773 INFO    SenderThread:78380 [sender.py:_start_run_threads():814] run started: vrnnskx1 with start time 1651620443
+2022-05-03 18:27:25,773 DEBUG   SenderThread:78380 [sender.py:send():232] send: summary
+2022-05-03 18:27:25,774 INFO    SenderThread:78380 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-03 18:27:25,774 DEBUG   SenderThread:78380 [sender.py:send_request():246] send_request: check_version
+2022-05-03 18:27:25,835 DEBUG   HandlerThread:78380 [handler.py:handle_request():141] handle_request: run_start

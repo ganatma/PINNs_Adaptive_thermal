@@ -19,7 +19,7 @@ from pyDOE import lhs
 import netCDF4
 from scipy import interpolate
 import wandb
-%matplotlib qt
+#%matplotlib qt
 
 #%% Wandb
 
@@ -297,7 +297,7 @@ def fit(
 
     X_test_data = dataprep(1)
     X_test_coords = X_test_data.getCoords(xmin = 0, xmax = 1, ymin = 0, ymax = 1, tmin = 4.95, num_x = 101, num_y = 101, num_t = 1)
-    X_test = X_test_data.getTemps(X_test_coords)
+    X_test = X_test_data.getTemps(X_test_coords,temp_cutoff=50000)
 
     T_test = np.reshape(X_test[:,3],(-1,1))
     x_test = np.reshape(X_test[:,1],(-1,1))
@@ -314,7 +314,7 @@ def fit(
         print("Initializing from scratch.")
     for epoch in range(tf_iter):
         print("Epoch: %d", (epoch))
-        progbar = tf.keras.utils.Progbar(500)
+        progbar = tf.keras.utils.Progbar(250)
         batch_count = 0
         for X_data_batch, X_colloc_batch in X_data_colloc_batch:
             progbar.update(batch_count)
@@ -387,11 +387,11 @@ def fit(
         
         if epoch % 10 == 0:
             T_test_pred = predict(x_test,y_test,t_test)
-            test_error = tf.keras.losses.MeanSquaredError(T_test, T_test_pred).numpy()
+            test_error = np.square(np.subtract(T_test, T_test_pred)).mean()
             print("Test error at epoch: %d is %d", (epoch, test_error))
             test_pred_image = wandb.Image(np.reshape(T_test_pred,(101,101),"F"),caption="Prediction at t= 4.95 s")
             test_image = wandb.Image(np.reshape(T_test,(101,101),"F"),caption="Truth at t= 4.95 s")
-            wandb.log({"Prediction":test_pred_image, "Truth": test_image})
+            wandb.log({"Test error": test_error, "Prediction":test_pred_image, "Truth": test_image})
 
     # L-BFGS optimization
     #print("Starting L_BFGS training")
@@ -541,7 +541,7 @@ class dataprep:
         return self.dataset
 
 #%%
-batch_size = 1024
+batch_size = 2048
 N_colloc = 256000
 N_data = 256000
 N_initial = 5000
