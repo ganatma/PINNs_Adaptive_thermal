@@ -313,9 +313,11 @@ def fit(
     else:
         print("Initializing from scratch.")
     for epoch in range(tf_iter):
+        print("Epoch: %d", (epoch))
+        progbar = tf.keras.utils.Progbar(500)
         batch_count = 0
         for X_data_batch, X_colloc_batch in X_data_colloc_batch:
-
+            progbar.update(batch_count)
             x_data_batch = np.reshape(X_data_batch[:,1],(-1,1))
             y_data_batch = np.reshape(X_data_batch[:,2],(-1,1))
             t_data_batch = np.reshape(X_data_batch[:,0],(-1,1))
@@ -372,7 +374,7 @@ def fit(
             batch_count = batch_count + 1
 
         ckpt.step.assign_add(1)
-        if epoch % 10 == 0:
+        if epoch % 1 == 0:
             elapsed = time.time() - start_time
             print("It: %d, Time: %.2f" % (epoch, elapsed))
             tf.print(
@@ -383,7 +385,7 @@ def fit(
             wandb.log({"epoch":epoch,"loss_data":loss_data,"loss_0": loss_0, "loss_colloc":loss_colloc,"loss_b":loss_ulb+loss_lrb,"Total_loss":loss_value})
             start_time = time.time()
         
-        if epoch % 100 == 0:
+        if epoch % 10 == 0:
             T_test_pred = predict(x_test,y_test,t_test)
             test_error = tf.keras.losses.MeanSquaredError(T_test, T_test_pred).numpy()
             print("Test error at epoch: %d is %d", (epoch, test_error))
