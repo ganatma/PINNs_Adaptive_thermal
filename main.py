@@ -62,16 +62,16 @@ def get_weights(model):
 # define the neural network model
 def neural_net(layer_sizes):
     model = Sequential()
-    model.add(layers.InputLayer(input_shape=(layer_sizes[0],)))
+    model.add(layers.InputLayer(input_shape=(layer_sizes[0],),dtype='float64'))
     for width in layer_sizes[1:-1]:
         model.add(
             layers.Dense(
-                width, activation=tf.nn.tanh, kernel_initializer="glorot_normal"
+                width, activation=tf.nn.tanh, kernel_initializer="glorot_normal", dtype = 'float64'
             )
         )
     model.add(
         layers.Dense(
-            layer_sizes[-1], activation=None, kernel_initializer="glorot_normal"
+            layer_sizes[-1], activation=None, kernel_initializer="glorot_normal", dtype = 'float64'
         )
     )
     return model
@@ -82,7 +82,6 @@ u_model = neural_net(layer_sizes)
 
 
 def loss(
-    f_model,
     x_data_batch,
     y_data_batch,
     t_data_batch,
@@ -108,6 +107,9 @@ def loss(
 ):
     # Loss_data component
     T_data_pred = u_model(tf.concat([x_data_batch, y_data_batch, t_data_batch], 1))
+    print(T_data_pred.dtype)
+    print(T_data_batch.dtype)
+    print(weights_data.dtype)
     mse_data_sa = tf.reduce_mean(tf.square(weights_data * (T_data_batch - T_data_pred)))
     mse_data = tf.reduce_mean(tf.square((T_data_batch - T_data_pred)))
 
@@ -146,15 +148,15 @@ def f_model(x, y, t):
     T_yy = tf.gradients(T_y, y)[0]
     T_t = tf.gradients(T, t)[0]
 
-    rho = tf.constant(8000.0, dtype=tf.float32)
-    cp = tf.constant(500.0, dtype=tf.float32)
-    k = tf.constant(16.3, dtype=tf.float32)
-    P = tf.constant(900.0, dtype=tf.float32)
-    nu = tf.constant(0.7, dtype=tf.float32)
-    r = tf.constant(1e-4, dtype=tf.float32)
-    coeff_1 = tf.constant(6.0, dtype=tf.float32)
-    coeff_2 = tf.constant(math.sqrt(3 / (math.pow(math.pi, 3))), dtype=tf.float32)
-    coeff_3 = tf.constant((nu * P) / (r ** 2), dtype=tf.float32)
+    rho = tf.constant(8000.0, dtype=tf.float64)
+    cp = tf.constant(500.0, dtype=tf.float64)
+    k = tf.constant(16.3, dtype=tf.float64)
+    P = tf.constant(900.0, dtype=tf.float64)
+    nu = tf.constant(0.7, dtype=tf.float64)
+    r = tf.constant(1e-4, dtype=tf.float64)
+    coeff_1 = tf.constant(6.0, dtype=tf.float64)
+    coeff_2 = tf.constant(math.sqrt(3 / (math.pow(math.pi, 3))), dtype=tf.float64)
+    coeff_3 = tf.constant(6.3e10, dtype=tf.float64)
     heat_source_coeff = coeff_1 * coeff_2 * coeff_3
     fx = (1.8e-1) * t
     c1 = (x - fx) / r
@@ -168,12 +170,12 @@ def f_model(x, y, t):
 
     return residual
 
-
+@tf.function
 def u_derv_ulb_model(u_model, x, y, t):
     T = u_model(tf.concat([x, y, t], 1))
     return tf.gradients(T, y)[0]
 
-
+@tf.function
 def u_derv_lrb_model(u_model, x, y, t):
     T = u_model(tf.concat([x, y, t], 1))
     return tf.gradients(T, x)[0]
@@ -181,7 +183,7 @@ def u_derv_lrb_model(u_model, x, y, t):
 
 #%% grad function for training of variables
 
-
+@tf.function
 def grad(
     x_data_batch,
     y_data_batch,
@@ -276,21 +278,21 @@ def fit(
     # create optimizers for network weights and
     tf_optimizer = tf.keras.optimizers.Adam(lr=0.001, beta_1=0.99)
     tf_optimizer_weights = tf.keras.optimizers.Adam(lr=0.005, beta_1=0.99)
-    iterator = iter(X_0)
+    iterator = iter(X_data_colloc_batch)
     ckpt = tf.train.Checkpoint(step=tf.Variable(1), optimizer=tf_optimizer, net=u_model, iterator=iterator)
     manager = tf.train.CheckpointManager(ckpt, './tf_ckpts', max_to_keep=10)
-    x_0 = X_0[:,1]
-    y_0 = X_0[:,2]
-    t_0 = X_0[:,0]
-    T_0 = X_0[:,3]
+    x_0 = np.reshape(X_0[:,1],(-1,1))
+    y_0 = np.reshape(X_0[:,2],(-1,1))
+    t_0 = np.reshape(X_0[:,0],(-1,1))
+    T_0 = np.reshape(X_0[:,3],(-1,1))
 
-    x_ulb = X_ul[:,1]
-    y_ulb = X_ul[:,2]
-    t_ulb = X_ul[:,0]
+    x_ulb = np.reshape(X_ul[:,1],(-1,1))
+    y_ulb = np.reshape(X_ul[:,2],(-1,1))
+    t_ulb = np.reshape(X_ul[:,0],(-1,1))
 
-    x_lrb = X_lr[:,1]
-    y_lrb = X_lr[:,2]
-    t_lrb = X_lr[:,0]
+    x_lrb = np.reshape(X_lr[:,1],(-1,1))
+    y_lrb = np.reshape(X_lr[:,2],(-1,1))
+    t_lrb = np.reshape(X_lr[:,0],(-1,1))
 
     # ADAM optimization
     print("Starting ADAM training")
@@ -301,16 +303,17 @@ def fit(
     else:
         print("Initializing from scratch.")
     for epoch in range(tf_iter):
-        for X_data_batch, X_colloc_batch in range(X_data_colloc_batch):
+        batch_count = 0
+        for X_data_batch, X_colloc_batch in X_data_colloc_batch:
 
-            x_data_batch = X_data_batch[:,1]
-            y_data_batch = X_data_batch[:,2]
-            t_data_batch = X_data_batch[:,0]
-            T_data_batch = X_data_batch[:,3]
+            x_data_batch = np.reshape(X_data_batch[:,1],(-1,1))
+            y_data_batch = np.reshape(X_data_batch[:,2],(-1,1))
+            t_data_batch = np.reshape(X_data_batch[:,0],(-1,1))
+            T_data_batch = np.reshape(X_data_batch[:,3],(-1,1))
 
-            x_colloc_batch = X_colloc_batch[:,1]
-            y_colloc_batch = X_colloc_batch[:,2]
-            t_colloc_batch = X_colloc_batch[:,0]
+            x_colloc_batch = np.reshape(X_colloc_batch[:,1],(-1,1))
+            y_colloc_batch = np.reshape(X_colloc_batch[:,2],(-1,1))
+            t_colloc_batch = np.reshape(X_colloc_batch[:,0],(-1,1))
             (
                 loss_value,
                 loss_data,
@@ -342,9 +345,9 @@ def fit(
                 x_lrb,
                 y_lrb,
                 t_lrb,
-                weights_data,
+                weights_data[batch_count],
                 weights_0,
-                weights_colloc,
+                weights_colloc[batch_count],
                 weights_ulb,
                 weights_lrb,
             )
@@ -353,12 +356,13 @@ def fit(
             tf_optimizer_weights.apply_gradients(
                 zip(
                     [-grads_data, -grads_0, -grads_colloc, -grads_ulb, -grads_lrb],
-                    [weights_data, weights_0, weights_colloc, weights_ulb, weights_lrb],
+                    [weights_data[batch_count], weights_0, weights_colloc[batch_count], weights_ulb, weights_lrb],
                 )
             )
+            batch_count = batch_count + 1
 
         ckpt.step.assign_add(1)
-        if epoch % 100 == 0:
+        if epoch % 10 == 0:
             elapsed = time.time() - start_time
             print("It: %d, Time: %.2f" % (epoch, elapsed))
             tf.print(
@@ -367,42 +371,43 @@ def fit(
             save_path = manager.save()
             print("Saved checkpoint for step {}: {}".format(int(ckpt.step), save_path))
             start_time = time.time()
+            
 
     # L-BFGS optimization
-    print("Starting L_BFGS training")
+    #print("Starting L_BFGS training")
 
-    loss_and_flat_grad = get_loss_and_flat_grad(
-        x_data_batch,
-        y_data_batch,
-        t_data_batch,
-        T_data_batch,
-        x_0,
-        y_0,
-        t_0,
-        T_0,
-        x_colloc_batch,
-        y_colloc_batch,
-        t_colloc_batch,
-        x_ulb,
-        y_ulb,
-        t_ulb,
-        x_lrb,
-        y_lrb,
-        t_lrb,
-        weights_data,
-        weights_0,
-        weights_colloc,
-        weights_ulb,
-        weights_lrb,
-    )
+    # loss_and_flat_grad = get_loss_and_flat_grad(
+    #     x_data_batch,
+    #     y_data_batch,
+    #     t_data_batch,
+    #     T_data_batch,
+    #     x_0,
+    #     y_0,
+    #     t_0,
+    #     T_0,
+    #     x_colloc_batch,
+    #     y_colloc_batch,
+    #     t_colloc_batch,
+    #     x_ulb,
+    #     y_ulb,
+    #     t_ulb,
+    #     x_lrb,
+    #     y_lrb,
+    #     t_lrb,
+    #     weights_data,
+    #     weights_0,
+    #     weights_colloc,
+    #     weights_ulb,
+    #     weights_lrb,
+    # )
 
-    lbfgs(
-        loss_and_flat_grad,
-        get_weights(u_model),
-        Struct(),
-        maxIter=newton_iter,
-        learningRate=0.8,
-    )
+    # lbfgs(
+    #     loss_and_flat_grad,
+    #     get_weights(u_model),
+    #     Struct(),
+    #     maxIter=newton_iter,
+    #     learningRate=0.8,
+    # )
 
 
 def get_loss_and_flat_grad(
@@ -516,9 +521,9 @@ class dataprep:
         return self.dataset
 
 #%%
-batch_size = 256
-N_colloc = 200000
-N_data = 200000
+batch_size = 1024
+N_colloc = 256000
+N_data = 256000
 N_initial = 5000
 N_boundary = 5000
 
@@ -566,13 +571,17 @@ X_lr = X_lr[idx,:]
 
 X_data_colloc_batch = tf.data.Dataset.zip((X_dataset_batch,X_colloc_batch))
 
-weights_data = tf.Variable(tf.random.uniform([N_data, 1]))
-weights_0 = tf.Variable(100*tf.random.uniform([N_initial, 1]))
-weights_colloc = tf.Variable(tf.random.uniform([N_colloc, 1]))
-weights_ulb = tf.Variable(tf.random.uniform([N_boundary, 1]))
-weights_lrb = tf.Variable(tf.random.uniform([N_boundary, 1]))
+weights_data = []
+weights_colloc = []
+for i in range(N_colloc/batch_size):
+    weights_data.append(tf.Variable(tf.random.uniform([batch_size, 1], dtype = 'float64')))
+    weights_colloc.append(tf.Variable(tf.random.uniform([batch_size, 1], dtype = 'float64')))
+weights_0 = tf.Variable(100*tf.random.uniform([N_initial, 1], dtype = 'float64'))
+
+weights_ulb = tf.Variable(tf.random.uniform([N_boundary, 1], dtype = 'float64'))
+weights_lrb = tf.Variable(tf.random.uniform([N_boundary, 1], dtype = 'float64'))
 tf_iter = 200000
-newton_iter = 50000
+newton_iter = 0
 
 # %% Training PINN
 
