@@ -313,7 +313,7 @@ def fit(
     else:
         print("Initializing from scratch.")
     for epoch in range(tf_iter):
-        print("Epoch: %d", (epoch))
+        print("Epoch: %d" % (epoch))
         progbar = tf.keras.utils.Progbar(250)
         batch_count = 0
         for X_data_batch, X_colloc_batch in X_data_colloc_batch:
@@ -386,12 +386,43 @@ def fit(
             start_time = time.time()
         
         if epoch % 10 == 0:
-            T_test_pred = predict(x_test,y_test,t_test)
+            T_test_pred, _ = predict(x_test,y_test,t_test)
             test_error = np.square(np.subtract(T_test, T_test_pred)).mean()
-            print("Test error at epoch: %d is %d", (epoch, test_error))
-            test_pred_image = wandb.Image(np.reshape(T_test_pred,(101,101),"F"),caption="Prediction at t= 4.95 s")
-            test_image = wandb.Image(np.reshape(T_test,(101,101),"F"),caption="Truth at t= 4.95 s")
-            wandb.log({"Test error": test_error, "Prediction":test_pred_image, "Truth": test_image})
+            print("Test error at epoch: %d is %d" % (epoch, test_error))
+            im1 = np.reshape(T_test,(101,101),"F")
+            im2 = np.reshape(T_test_pred,(101,101),"F")
+            im3 = np.absolute(im2-im1)
+            
+            fig, (ax1, ax2, ax3) = plt.subplots(figsize=(13, 3), ncols=3)
+
+            pos = ax1.imshow(im1, cmap="jet", vmin=0, vmax=4000, interpolation="none")
+            fig.colorbar(pos, ax=ax1, extend="both", label="Temperature")
+            ax1.set_title("Analytical Model")
+
+            neg = ax2.imshow(im2, cmap="jet", vmin=0, vmax=4000, interpolation="none")
+            fig.colorbar(
+                neg,
+                ax=ax2,
+                location="right",
+                anchor=(0, 0.3),
+                extend="both",
+                label="Temperature",
+            )
+            ax2.set_title("SA-PINNs Model")
+
+            pos_neg_clipped = ax3.imshow(
+                im3, cmap="jet", vmin=0, vmax=4000, interpolation="none"
+            )
+
+            cbar = fig.colorbar(pos_neg_clipped, ax=ax3, extend="both", label="Temperature")
+            ax3.set_title("Error Map")
+            cbar.minorticks_on()
+            fig.savefig('./pred_plots/pred_'+str(epoch)+'.png')
+
+            # test_pred_image = wandb.Image(np.reshape(T_test_pred,(101,101),"F"),caption="Prediction at t= 4.95 s")
+            # test_image = wandb.Image(np.reshape(T_test,(101,101),"F"),caption="Truth at t= 4.95 s")
+            # wandb.log({"Test error": test_error, "Prediction":test_pred_image, "Truth": test_image})
+            wandb.log({"Test error": test_error, "Prediction": wandb.Image('./pred_plots/pred_'+str(epoch)+'.png')})
 
     # L-BFGS optimization
     #print("Starting L_BFGS training")
@@ -600,7 +631,7 @@ weights_0 = tf.Variable(100*tf.random.uniform([N_initial, 1], dtype = 'float64')
 
 weights_ulb = tf.Variable(tf.random.uniform([N_boundary, 1], dtype = 'float64'))
 weights_lrb = tf.Variable(tf.random.uniform([N_boundary, 1], dtype = 'float64'))
-tf_iter = 200000
+tf_iter = 20000
 newton_iter = 0
 
 # %% Training PINN
