@@ -1,0 +1,62 @@
+Starting ADAM training
+Restored from ./tf_ckpts\ckpt-307
+Epoch: 0
+  0/125 [..............................] - ETA: 0s
+C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\keras\optimizer_v2\optimizer_v2.py:375: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  "The `lr` argument is deprecated, use `learning_rate` instead.")
+  0/125 [..............................] - ETA: 0sTest error at epoch: 0 is 2287520
+
+  1/125 [..............................] - ETA: 40:07Test error at epoch: 0 is 2287535
+
+  2/125 [..............................] - ETA: 12:26Test error at epoch: 0 is 2287550
+  3/125 [..............................] - ETA: 12:34
+Traceback (most recent call last):
+  File "main.py", line 747, in <module>
+    newton_iter,
+  File "main.py", line 379, in fit
+    weights_lrb,
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\eager\def_function.py", line 889, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\eager\def_function.py", line 924, in _call
+    results = self._stateful_fn(*args, **kwds)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\eager\function.py", line 3022, in __call__
+    filtered_flat_args) = self._maybe_define_function(args, kwargs)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\eager\function.py", line 3444, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\eager\function.py", line 3289, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\framework\func_graph.py", line 999, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\eager\def_function.py", line 672, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\framework\func_graph.py", line 982, in wrapper
+    user_requested=True,
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 444, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "C:\Users\ganat\AppData\Local\Temp\tmpeq0mp456.py", line 14, in tf__grad
+    grads_0 = ag__.converted_call(ag__.ld(tape).gradient, (ag__.ld(loss_value), ag__.ld(weights_0)), None, fscope)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 336, in converted_call
+    return _call_unconverted(f, args, kwargs, options, False)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 464, in _call_unconverted
+    return f(*args)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\eager\backprop.py", line 1080, in gradient
+    unconnected_gradients=unconnected_gradients)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\eager\imperative_grad.py", line 77, in imperative_grad
+    compat.as_str(unconnected_gradients.value))
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\eager\backprop.py", line 159, in _gradient_function
+    return grad_fn(mock_op, *out_grads)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\ops\math_grad.py", line 255, in _MeanGrad
+    sum_grad = _SumGrad(op, grad)[0]
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\ops\math_grad.py", line 169, in _SumGrad
+    input_shape = constant_op.constant(input_0_shape, dtype=dtypes.int32)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\framework\constant_op.py", line 265, in constant
+    allow_broadcast=True)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\framework\constant_op.py", line 287, in _constant_impl
+    "Const", [], [dtype_value.type], attrs=attrs, name=name).outputs[0]
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\framework\func_graph.py", line 601, in _create_op_internal
+    compute_device)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\framework\ops.py", line 3565, in _create_op_internal
+    op_def=op_def)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\framework\ops.py", line 2056, in __init__
+    output_type = pywrap_tf_session.TF_OperationOutputType(tf_output)
+KeyboardInterrupt

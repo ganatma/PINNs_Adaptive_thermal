@@ -1,0 +1,154 @@
+2022-05-03 22:41:52,928 INFO    MainThread:37116 [internal.py:wandb_internal():93] W&B internal server running at pid: 37116, started at: 2022-05-03 22:41:52.927155
+2022-05-03 22:41:52,931 INFO    WriterThread:37116 [datastore.py:open_for_write():75] open: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\run-2tiun5eb.wandb
+2022-05-03 22:41:52,935 DEBUG   SenderThread:37116 [sender.py:send():232] send: header
+2022-05-03 22:41:52,935 DEBUG   SenderThread:37116 [sender.py:send():232] send: run
+2022-05-03 22:41:53,152 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: check_version
+2022-05-03 22:41:53,165 INFO    SenderThread:37116 [dir_watcher.py:__init__():197] watching files in: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files
+2022-05-03 22:41:53,166 INFO    SenderThread:37116 [sender.py:_start_run_threads():814] run started: 2tiun5eb with start time 1651635711
+2022-05-03 22:41:53,166 DEBUG   SenderThread:37116 [sender.py:send():232] send: summary
+2022-05-03 22:41:53,167 INFO    SenderThread:37116 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-03 22:41:53,167 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: check_version
+2022-05-03 22:41:53,240 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: run_start
+2022-05-03 22:41:54,181 INFO    Thread-11 :37116 [dir_watcher.py:_on_file_created():244] file/dir created: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\wandb-summary.json
+2022-05-03 22:41:55,855 DEBUG   HandlerThread:37116 [meta.py:__init__():35] meta init
+2022-05-03 22:41:55,855 DEBUG   HandlerThread:37116 [meta.py:__init__():49] meta init done
+2022-05-03 22:41:55,855 DEBUG   HandlerThread:37116 [meta.py:probe():209] probe
+2022-05-03 22:41:55,963 DEBUG   HandlerThread:37116 [meta.py:_setup_git():199] setup git
+2022-05-03 22:41:56,056 DEBUG   HandlerThread:37116 [meta.py:_setup_git():206] setup git done
+2022-05-03 22:41:56,056 DEBUG   HandlerThread:37116 [meta.py:_save_pip():53] save pip
+2022-05-03 22:41:56,057 DEBUG   HandlerThread:37116 [meta.py:_save_pip():67] save pip done
+2022-05-03 22:41:56,058 DEBUG   HandlerThread:37116 [meta.py:_save_conda():74] save conda
+2022-05-03 22:41:56,187 INFO    Thread-11 :37116 [dir_watcher.py:_on_file_created():244] file/dir created: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\conda-environment.yaml
+2022-05-03 22:41:56,188 INFO    Thread-11 :37116 [dir_watcher.py:_on_file_created():244] file/dir created: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\requirements.txt
+2022-05-03 22:41:59,208 INFO    Thread-11 :37116 [dir_watcher.py:_on_file_created():244] file/dir created: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\output.log
+2022-05-03 22:41:59,619 DEBUG   HandlerThread:37116 [meta.py:_save_conda():84] save conda done
+2022-05-03 22:41:59,619 DEBUG   HandlerThread:37116 [meta.py:probe():247] probe done
+2022-05-03 22:41:59,624 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-03 22:41:59,624 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: stop_status
+2022-05-03 22:41:59,792 DEBUG   SenderThread:37116 [sender.py:send():232] send: telemetry
+2022-05-03 22:41:59,792 DEBUG   SenderThread:37116 [sender.py:send():232] send: files
+2022-05-03 22:41:59,792 INFO    SenderThread:37116 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-05-03 22:42:00,220 INFO    Thread-11 :37116 [dir_watcher.py:_on_file_modified():257] file/dir modified: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\conda-environment.yaml
+2022-05-03 22:42:00,221 INFO    Thread-11 :37116 [dir_watcher.py:_on_file_created():244] file/dir created: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\wandb-metadata.json
+2022-05-03 22:42:00,322 INFO    Thread-17 :37116 [upload_job.py:push():132] Uploaded file C:\Users\ganat\AppData\Local\Temp\tmphfge1ioswandb\2z3624t6-wandb-metadata.json
+2022-05-03 22:42:03,247 INFO    Thread-11 :37116 [dir_watcher.py:_on_file_modified():257] file/dir modified: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\output.log
+2022-05-03 22:42:07,266 INFO    Thread-11 :37116 [dir_watcher.py:_on_file_modified():257] file/dir modified: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\output.log
+2022-05-03 22:42:14,795 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-03 22:42:14,795 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: stop_status
+2022-05-03 22:42:20,170 DEBUG   SenderThread:37116 [sender.py:send():232] send: telemetry
+2022-05-03 22:42:20,383 DEBUG   SenderThread:37116 [sender.py:send():232] send: exit
+2022-05-03 22:42:20,383 INFO    SenderThread:37116 [sender.py:send_exit():368] handling exit code: 1
+2022-05-03 22:42:20,383 INFO    SenderThread:37116 [sender.py:send_exit():370] handling runtime: 27
+2022-05-03 22:42:20,385 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-03 22:42:20,385 INFO    SenderThread:37116 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-03 22:42:20,385 INFO    SenderThread:37116 [sender.py:send_exit():376] send defer
+2022-05-03 22:42:20,385 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: poll_exit
+2022-05-03 22:42:20,386 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: defer
+2022-05-03 22:42:20,386 INFO    HandlerThread:37116 [handler.py:handle_request_defer():164] handle defer: 0
+2022-05-03 22:42:20,386 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: defer
+2022-05-03 22:42:20,386 INFO    SenderThread:37116 [sender.py:send_request_defer():385] handle sender defer: 0
+2022-05-03 22:42:20,387 INFO    SenderThread:37116 [sender.py:transition_state():389] send defer: 1
+2022-05-03 22:42:20,387 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: defer
+2022-05-03 22:42:20,387 INFO    HandlerThread:37116 [handler.py:handle_request_defer():164] handle defer: 1
+2022-05-03 22:42:20,417 INFO    Thread-11 :37116 [dir_watcher.py:_on_file_modified():257] file/dir modified: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\output.log
+2022-05-03 22:42:20,417 INFO    Thread-11 :37116 [dir_watcher.py:_on_file_modified():257] file/dir modified: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\wandb-summary.json
+2022-05-03 22:42:20,559 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: defer
+2022-05-03 22:42:20,559 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-03 22:42:20,559 INFO    SenderThread:37116 [sender.py:send_request_defer():385] handle sender defer: 1
+2022-05-03 22:42:20,559 INFO    SenderThread:37116 [sender.py:transition_state():389] send defer: 2
+2022-05-03 22:42:20,560 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: poll_exit
+2022-05-03 22:42:20,560 DEBUG   SenderThread:37116 [sender.py:send():232] send: stats
+2022-05-03 22:42:20,561 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: defer
+2022-05-03 22:42:20,561 INFO    HandlerThread:37116 [handler.py:handle_request_defer():164] handle defer: 2
+2022-05-03 22:42:20,561 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: defer
+2022-05-03 22:42:20,561 INFO    SenderThread:37116 [sender.py:send_request_defer():385] handle sender defer: 2
+2022-05-03 22:42:20,561 INFO    SenderThread:37116 [sender.py:transition_state():389] send defer: 3
+2022-05-03 22:42:20,561 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: defer
+2022-05-03 22:42:20,561 INFO    HandlerThread:37116 [handler.py:handle_request_defer():164] handle defer: 3
+2022-05-03 22:42:20,561 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: defer
+2022-05-03 22:42:20,561 INFO    SenderThread:37116 [sender.py:send_request_defer():385] handle sender defer: 3
+2022-05-03 22:42:20,562 INFO    SenderThread:37116 [sender.py:transition_state():389] send defer: 4
+2022-05-03 22:42:20,562 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: defer
+2022-05-03 22:42:20,562 INFO    HandlerThread:37116 [handler.py:handle_request_defer():164] handle defer: 4
+2022-05-03 22:42:20,562 DEBUG   SenderThread:37116 [sender.py:send():232] send: summary
+2022-05-03 22:42:20,563 INFO    SenderThread:37116 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-03 22:42:20,563 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: defer
+2022-05-03 22:42:20,563 INFO    SenderThread:37116 [sender.py:send_request_defer():385] handle sender defer: 4
+2022-05-03 22:42:20,563 INFO    SenderThread:37116 [sender.py:transition_state():389] send defer: 5
+2022-05-03 22:42:20,563 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: defer
+2022-05-03 22:42:20,563 INFO    HandlerThread:37116 [handler.py:handle_request_defer():164] handle defer: 5
+2022-05-03 22:42:20,563 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: defer
+2022-05-03 22:42:20,564 INFO    SenderThread:37116 [sender.py:send_request_defer():385] handle sender defer: 5
+2022-05-03 22:42:20,667 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-03 22:42:20,836 INFO    SenderThread:37116 [sender.py:transition_state():389] send defer: 6
+2022-05-03 22:42:20,836 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: poll_exit
+2022-05-03 22:42:20,837 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: defer
+2022-05-03 22:42:20,837 INFO    HandlerThread:37116 [handler.py:handle_request_defer():164] handle defer: 6
+2022-05-03 22:42:20,837 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: defer
+2022-05-03 22:42:20,837 INFO    SenderThread:37116 [sender.py:send_request_defer():385] handle sender defer: 6
+2022-05-03 22:42:20,837 INFO    SenderThread:37116 [dir_watcher.py:finish():312] shutting down directory watcher
+2022-05-03 22:42:20,951 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-03 22:42:21,426 INFO    SenderThread:37116 [dir_watcher.py:_on_file_modified():257] file/dir modified: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\config.yaml
+2022-05-03 22:42:21,427 INFO    SenderThread:37116 [dir_watcher.py:_on_file_modified():257] file/dir modified: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\wandb-summary.json
+2022-05-03 22:42:21,427 INFO    SenderThread:37116 [dir_watcher.py:finish():342] scan: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files
+2022-05-03 22:42:21,427 INFO    SenderThread:37116 [dir_watcher.py:finish():356] scan save: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\conda-environment.yaml conda-environment.yaml
+2022-05-03 22:42:21,428 INFO    SenderThread:37116 [dir_watcher.py:finish():356] scan save: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\config.yaml config.yaml
+2022-05-03 22:42:21,428 INFO    SenderThread:37116 [dir_watcher.py:finish():356] scan save: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\output.log output.log
+2022-05-03 22:42:21,431 INFO    SenderThread:37116 [dir_watcher.py:finish():356] scan save: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\requirements.txt requirements.txt
+2022-05-03 22:42:21,432 INFO    SenderThread:37116 [dir_watcher.py:finish():356] scan save: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\wandb-metadata.json wandb-metadata.json
+2022-05-03 22:42:21,432 INFO    SenderThread:37116 [dir_watcher.py:finish():356] scan save: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\wandb-summary.json wandb-summary.json
+2022-05-03 22:42:21,446 INFO    SenderThread:37116 [sender.py:transition_state():389] send defer: 7
+2022-05-03 22:42:21,446 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: poll_exit
+2022-05-03 22:42:21,447 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: defer
+2022-05-03 22:42:21,448 INFO    HandlerThread:37116 [handler.py:handle_request_defer():164] handle defer: 7
+2022-05-03 22:42:21,448 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: defer
+2022-05-03 22:42:21,448 INFO    SenderThread:37116 [sender.py:send_request_defer():385] handle sender defer: 7
+2022-05-03 22:42:21,448 INFO    SenderThread:37116 [file_pusher.py:finish():145] shutting down file pusher
+2022-05-03 22:42:21,550 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-03 22:42:21,550 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: poll_exit
+2022-05-03 22:42:21,659 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-03 22:42:21,659 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: poll_exit
+2022-05-03 22:42:21,768 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-03 22:42:21,768 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: poll_exit
+2022-05-03 22:42:21,880 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-03 22:42:21,880 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: poll_exit
+2022-05-03 22:42:21,928 INFO    Thread-18 :37116 [upload_job.py:push():132] Uploaded file C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\conda-environment.yaml
+2022-05-03 22:42:21,930 INFO    Thread-19 :37116 [upload_job.py:push():132] Uploaded file C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\config.yaml
+2022-05-03 22:42:21,932 INFO    Thread-21 :37116 [upload_job.py:push():132] Uploaded file C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\requirements.txt
+2022-05-03 22:42:21,935 INFO    Thread-20 :37116 [upload_job.py:push():132] Uploaded file C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\output.log
+2022-05-03 22:42:21,948 INFO    Thread-22 :37116 [upload_job.py:push():132] Uploaded file C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\files\wandb-summary.json
+2022-05-03 22:42:21,989 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-03 22:42:21,989 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: poll_exit
+2022-05-03 22:42:22,098 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-03 22:42:22,098 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: poll_exit
+2022-05-03 22:42:22,160 INFO    Thread-10 :37116 [sender.py:transition_state():389] send defer: 8
+2022-05-03 22:42:22,160 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: defer
+2022-05-03 22:42:22,160 INFO    HandlerThread:37116 [handler.py:handle_request_defer():164] handle defer: 8
+2022-05-03 22:42:22,160 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: defer
+2022-05-03 22:42:22,160 INFO    SenderThread:37116 [sender.py:send_request_defer():385] handle sender defer: 8
+2022-05-03 22:42:22,205 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-03 22:42:22,454 INFO    SenderThread:37116 [sender.py:transition_state():389] send defer: 9
+2022-05-03 22:42:22,454 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: poll_exit
+2022-05-03 22:42:22,455 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: defer
+2022-05-03 22:42:22,455 INFO    HandlerThread:37116 [handler.py:handle_request_defer():164] handle defer: 9
+2022-05-03 22:42:22,455 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: defer
+2022-05-03 22:42:22,455 INFO    SenderThread:37116 [sender.py:send_request_defer():385] handle sender defer: 9
+2022-05-03 22:42:22,455 INFO    SenderThread:37116 [sender.py:transition_state():389] send defer: 10
+2022-05-03 22:42:22,456 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: defer
+2022-05-03 22:42:22,456 INFO    HandlerThread:37116 [handler.py:handle_request_defer():164] handle defer: 10
+2022-05-03 22:42:22,456 DEBUG   SenderThread:37116 [sender.py:send():232] send: final
+2022-05-03 22:42:22,456 DEBUG   SenderThread:37116 [sender.py:send():232] send: footer
+2022-05-03 22:42:22,456 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: defer
+2022-05-03 22:42:22,457 INFO    SenderThread:37116 [sender.py:send_request_defer():385] handle sender defer: 10
+2022-05-03 22:42:22,565 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-03 22:42:22,566 DEBUG   SenderThread:37116 [sender.py:send_request():246] send_request: poll_exit
+2022-05-03 22:42:22,566 INFO    SenderThread:37116 [file_pusher.py:join():150] waiting for file pusher
+2022-05-03 22:42:22,969 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: sampled_history
+2022-05-03 22:42:22,970 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: get_summary
+2022-05-03 22:42:22,971 DEBUG   HandlerThread:37116 [handler.py:handle_request():141] handle_request: shutdown
+2022-05-03 22:42:22,971 INFO    HandlerThread:37116 [handler.py:finish():806] shutting down handler
+2022-05-03 22:42:23,469 INFO    WriterThread:37116 [datastore.py:close():279] close: C:\Research\PINNs_Adaptive_thermal\wandb\run-20220503_224151-2tiun5eb\run-2tiun5eb.wandb
+2022-05-03 22:42:23,866 INFO    SenderThread:37116 [sender.py:finish():1110] shutting down sender
+2022-05-03 22:42:23,866 INFO    SenderThread:37116 [file_pusher.py:finish():145] shutting down file pusher
+2022-05-03 22:42:23,866 INFO    SenderThread:37116 [file_pusher.py:join():150] waiting for file pusher
+2022-05-03 22:42:23,868 INFO    MainThread:37116 [internal.py:handle_exit():80] Internal process exited

@@ -1,5 +1,6 @@
 #%% Import required libraries
 
+import matplotlib
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
@@ -19,6 +20,8 @@ from pyDOE import lhs
 import netCDF4
 from scipy import interpolate
 import wandb
+
+matplotlib.rcParams.update(matplotlib.rcParamsDefault)
 #%matplotlib qt
 
 #%% Wandb
@@ -27,7 +30,7 @@ wandb.init(project="sa-pinns")
 
 #%% Defining size of network
 
-layer_sizes = [3, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]
+layer_sizes = [3, 128, 128, 128, 128, 128, 1]
 
 sizes_w = []
 sizes_b = []
@@ -66,16 +69,22 @@ def get_weights(model):
 # define the neural network model
 def neural_net(layer_sizes):
     model = Sequential()
-    model.add(layers.InputLayer(input_shape=(layer_sizes[0],),dtype='float64'))
+    model.add(layers.InputLayer(input_shape=(layer_sizes[0],), dtype="float64"))
     for width in layer_sizes[1:-1]:
         model.add(
             layers.Dense(
-                width, activation=tf.nn.tanh, kernel_initializer="glorot_normal", dtype = 'float64'
+                width,
+                activation=tf.nn.tanh,
+                kernel_initializer="glorot_normal",
+                dtype="float64",
             )
         )
     model.add(
         layers.Dense(
-            layer_sizes[-1], activation=None, kernel_initializer="glorot_normal", dtype = 'float64'
+            layer_sizes[-1],
+            activation=None,
+            kernel_initializer="glorot_normal",
+            dtype="float64",
         )
     )
     return model
@@ -149,15 +158,15 @@ def f_model(x, y, t):
     T_yy = tf.gradients(T_y, y)[0]
     T_t = tf.gradients(T, t)[0]
 
-    rho = tf.constant(8000.0, dtype=tf.float64)
-    cp = tf.constant(500.0, dtype=tf.float64)
-    k = tf.constant(16.3, dtype=tf.float64)
-    P = tf.constant(900.0, dtype=tf.float64)
+    rho = tf.constant(8e-3, dtype=tf.float64)
+    cp = tf.constant(500e4, dtype=tf.float64)
+    k = tf.constant(16.3e2, dtype=tf.float64)
+    P = tf.constant(1e6, dtype=tf.float64)
     nu = tf.constant(0.7, dtype=tf.float64)
-    r = tf.constant(1e-4, dtype=tf.float64)
+    r = tf.constant(1e-2, dtype=tf.float64)
     coeff_1 = tf.constant(6.0, dtype=tf.float64)
     coeff_2 = tf.constant(math.sqrt(3 / (math.pow(math.pi, 3))), dtype=tf.float64)
-    coeff_3 = tf.constant(6.3e10, dtype=tf.float64)
+    coeff_3 = tf.constant(7e11, dtype=tf.float64)
     heat_source_coeff = coeff_1 * coeff_2 * coeff_3
     fx = (1.8e-1) * t
     c1 = (x - fx) / r
@@ -171,10 +180,12 @@ def f_model(x, y, t):
 
     return residual
 
+
 @tf.function
 def u_derv_ulb_model(u_model, x, y, t):
     T = u_model(tf.concat([x, y, t], 1))
     return tf.gradients(T, y)[0]
+
 
 @tf.function
 def u_derv_lrb_model(u_model, x, y, t):
@@ -183,6 +194,7 @@ def u_derv_lrb_model(u_model, x, y, t):
 
 
 #%% grad function for training of variables
+
 
 @tf.function
 def grad(
@@ -280,29 +292,33 @@ def fit(
     tf_optimizer = tf.keras.optimizers.Adam(lr=0.001, beta_1=0.99)
     tf_optimizer_weights = tf.keras.optimizers.Adam(lr=0.005, beta_1=0.99)
     iterator = iter(X_data_colloc_batch)
-    ckpt = tf.train.Checkpoint(step=tf.Variable(1), optimizer=tf_optimizer, net=u_model, iterator=iterator)
-    manager = tf.train.CheckpointManager(ckpt, './tf_ckpts', max_to_keep=10)
-    x_0 = np.reshape(X_0[:,1],(-1,1))
-    y_0 = np.reshape(X_0[:,2],(-1,1))
-    t_0 = np.reshape(X_0[:,0],(-1,1))
-    T_0 = np.reshape(X_0[:,3],(-1,1))
+    ckpt = tf.train.Checkpoint(
+        step=tf.Variable(1), optimizer=tf_optimizer, net=u_model, iterator=iterator
+    )
+    manager = tf.train.CheckpointManager(ckpt, "./tf_ckpts", max_to_keep=10)
+    x_0 = np.reshape(X_0[:, 1], (-1, 1))
+    y_0 = np.reshape(X_0[:, 2], (-1, 1))
+    t_0 = np.reshape(X_0[:, 0], (-1, 1))
+    T_0 = np.reshape(X_0[:, 3], (-1, 1))
 
-    x_ulb = np.reshape(X_ul[:,1],(-1,1))
-    y_ulb = np.reshape(X_ul[:,2],(-1,1))
-    t_ulb = np.reshape(X_ul[:,0],(-1,1))
+    x_ulb = np.reshape(X_ul[:, 1], (-1, 1))
+    y_ulb = np.reshape(X_ul[:, 2], (-1, 1))
+    t_ulb = np.reshape(X_ul[:, 0], (-1, 1))
 
-    x_lrb = np.reshape(X_lr[:,1],(-1,1))
-    y_lrb = np.reshape(X_lr[:,2],(-1,1))
-    t_lrb = np.reshape(X_lr[:,0],(-1,1))
+    x_lrb = np.reshape(X_lr[:, 1], (-1, 1))
+    y_lrb = np.reshape(X_lr[:, 2], (-1, 1))
+    t_lrb = np.reshape(X_lr[:, 0], (-1, 1))
 
     X_test_data = dataprep(1)
-    X_test_coords = X_test_data.getCoords(xmin = 0, xmax = 1, ymin = 0, ymax = 1, tmin = 4.95, num_x = 101, num_y = 101, num_t = 1)
-    X_test = X_test_data.getTemps(X_test_coords,temp_cutoff=50000)
+    X_test_coords = X_test_data.getCoords(
+        xmin=0, xmax=1, ymin=0, ymax=1, tmin=5.0, num_x=101, num_y=101, num_t=1
+    )
+    X_test = X_test_data.getTemps(X_test_coords, temp_cutoff=50000)
 
-    T_test = np.reshape(X_test[:,3],(-1,1))
-    x_test = np.reshape(X_test[:,1],(-1,1))
-    y_test = np.reshape(X_test[:,2],(-1,1))
-    t_test = np.reshape(X_test[:,0],(-1,1))
+    T_test = np.reshape(X_test[:, 3], (-1, 1))
+    x_test = np.reshape(X_test[:, 1], (-1, 1))
+    y_test = np.reshape(X_test[:, 2], (-1, 1))
+    t_test = np.reshape(X_test[:, 0], (-1, 1))
 
     # ADAM optimization
     print("Starting ADAM training")
@@ -314,18 +330,18 @@ def fit(
         print("Initializing from scratch.")
     for epoch in range(tf_iter):
         print("Epoch: %d" % (epoch))
-        progbar = tf.keras.utils.Progbar(250)
+        progbar = tf.keras.utils.Progbar(125)
         batch_count = 0
         for X_data_batch, X_colloc_batch in X_data_colloc_batch:
             progbar.update(batch_count)
-            x_data_batch = np.reshape(X_data_batch[:,1],(-1,1))
-            y_data_batch = np.reshape(X_data_batch[:,2],(-1,1))
-            t_data_batch = np.reshape(X_data_batch[:,0],(-1,1))
-            T_data_batch = np.reshape(X_data_batch[:,3],(-1,1))
+            x_data_batch = np.reshape(X_data_batch[:, 1], (-1, 1))
+            y_data_batch = np.reshape(X_data_batch[:, 2], (-1, 1))
+            t_data_batch = np.reshape(X_data_batch[:, 0], (-1, 1))
+            T_data_batch = np.reshape(X_data_batch[:, 3], (-1, 1))
 
-            x_colloc_batch = np.reshape(X_colloc_batch[:,1],(-1,1))
-            y_colloc_batch = np.reshape(X_colloc_batch[:,2],(-1,1))
-            t_colloc_batch = np.reshape(X_colloc_batch[:,0],(-1,1))
+            x_colloc_batch = np.reshape(X_colloc_batch[:, 1], (-1, 1))
+            y_colloc_batch = np.reshape(X_colloc_batch[:, 2], (-1, 1))
+            t_colloc_batch = np.reshape(X_colloc_batch[:, 0], (-1, 1))
             (
                 loss_value,
                 loss_data,
@@ -368,7 +384,13 @@ def fit(
             tf_optimizer_weights.apply_gradients(
                 zip(
                     [-grads_data, -grads_0, -grads_colloc, -grads_ulb, -grads_lrb],
-                    [weights_data[batch_count], weights_0, weights_colloc[batch_count], weights_ulb, weights_lrb],
+                    [
+                        weights_data[batch_count],
+                        weights_0,
+                        weights_colloc[batch_count],
+                        weights_ulb,
+                        weights_lrb,
+                    ],
                 )
             )
             batch_count = batch_count + 1
@@ -382,24 +404,33 @@ def fit(
             )
             save_path = manager.save()
             print("Saved checkpoint for step {}: {}".format(int(ckpt.step), save_path))
-            wandb.log({"epoch":epoch,"loss_data":loss_data,"loss_0": loss_0, "loss_colloc":loss_colloc,"loss_b":loss_ulb+loss_lrb,"Total_loss":loss_value})
+            wandb.log(
+                {
+                    "epoch": epoch,
+                    "loss_data": loss_data,
+                    "loss_0": loss_0,
+                    "loss_colloc": loss_colloc,
+                    "loss_b": loss_ulb + loss_lrb,
+                    "Total_loss": loss_value,
+                }
+            )
             start_time = time.time()
-        
+
         if epoch % 10 == 0:
-            T_test_pred, _ = predict(x_test,y_test,t_test)
+            T_test_pred, _ = predict(x_test, y_test, t_test)
             test_error = np.square(np.subtract(T_test, T_test_pred)).mean()
             print("Test error at epoch: %d is %d" % (epoch, test_error))
-            im1 = np.reshape(T_test,(101,101),"F")
-            im2 = np.reshape(T_test_pred,(101,101),"F")
-            im3 = np.absolute(im2-im1)
-            
+            im1 = np.reshape(T_test, (101, 101), "F")
+            im2 = np.reshape(T_test_pred, (101, 101), "F")
+            im3 = np.absolute(im2 - im1)
+
             fig, (ax1, ax2, ax3) = plt.subplots(figsize=(13, 3), ncols=3)
 
-            pos = ax1.imshow(im1, cmap="jet", vmin=0, vmax=4000, interpolation="none")
+            pos = ax1.imshow(im1, cmap="jet", vmin=0, vmax=5000, interpolation="none")
             fig.colorbar(pos, ax=ax1, extend="both", label="Temperature")
             ax1.set_title("Analytical Model")
 
-            neg = ax2.imshow(im2, cmap="jet", vmin=0, vmax=4000, interpolation="none")
+            neg = ax2.imshow(im2, cmap="jet", vmin=0, vmax=5000, interpolation="none")
             fig.colorbar(
                 neg,
                 ax=ax2,
@@ -411,21 +442,24 @@ def fit(
             ax2.set_title("SA-PINNs Model")
 
             pos_neg_clipped = ax3.imshow(
-                im3, cmap="jet", vmin=0, vmax=4000, interpolation="none"
+                im3, cmap="jet", vmin=0, vmax=5000, interpolation="none"
             )
 
-            cbar = fig.colorbar(pos_neg_clipped, ax=ax3, extend="both", label="Temperature")
+            cbar = fig.colorbar(
+                pos_neg_clipped, ax=ax3, extend="both", label="Temperature"
+            )
             ax3.set_title("Error Map")
             cbar.minorticks_on()
-            fig.savefig('./pred_plots/pred_'+str(epoch)+'.png')
+            plt.savefig("pred.png")
+            plt.close(fig)
 
             # test_pred_image = wandb.Image(np.reshape(T_test_pred,(101,101),"F"),caption="Prediction at t= 4.95 s")
             # test_image = wandb.Image(np.reshape(T_test,(101,101),"F"),caption="Truth at t= 4.95 s")
             # wandb.log({"Test error": test_error, "Prediction":test_pred_image, "Truth": test_image})
-            wandb.log({"Test error": test_error, "Prediction": wandb.Image('./pred_plots/pred_'+str(epoch)+'.png')})
+            wandb.log({"Test error": test_error, "Prediction": wandb.Image("pred.png")})
 
     # L-BFGS optimization
-    #print("Starting L_BFGS training")
+    # print("Starting L_BFGS training")
 
     # loss_and_flat_grad = get_loss_and_flat_grad(
     #     x_data_batch,
@@ -531,19 +565,20 @@ def predict(x, y, t):
 
     return T_star.numpy(), f_T_star.numpy()
 
+
 #%% Dataprep class
+
 
 class dataprep:
     # Initialize class
-    def __init__(self, xmax, filename="function_heat_source_out_SS_final.e"):
+    def __init__(self, xmax, filename="function_heat_source_out_100W_6s.e"):
         nc = netCDF4.Dataset(filename)
         temps = nc.variables["vals_nod_var1"]
         temps = np.array(temps)
-        self.temp = temps.reshape((110, 6, 101, 101))
+        self.temp = temps.reshape((121, 6, 101, 101))
         x = np.linspace(0, xmax, 101)
         y = np.linspace(0, xmax, 101)
-        t = np.linspace(0, 5.994, 109)
-        t = np.append(t,6)
+        t = np.linspace(0, 6, 121)
         self.temp_func = interpolate.RegularGridInterpolator(
             (t, x, y), self.temp[:, 5, :, :]
         )
@@ -554,7 +589,7 @@ class dataprep:
 
         x = np.linspace(xmin, xmax, num=num_x)
         y = np.linspace(ymin, ymax, num=num_y)
-        t = np.linspace(tmin, tmin+((num_t-1)*0.0555), num=num_t)
+        t = np.linspace(tmin, tmin + ((num_t - 1) * 0.05), num=num_t)
         xxx, yyy, ttt = np.meshgrid(x, y, t)
         xxx = xxx.flatten()[:, None]
         yyy = yyy.flatten()[:, None]
@@ -571,6 +606,7 @@ class dataprep:
         self.dataset = np.concatenate((self.coords_upd, self.temp_upd), 1)
         return self.dataset
 
+
 #%%
 batch_size = 2048
 N_colloc = 256000
@@ -580,7 +616,16 @@ N_boundary = 5000
 
 # Dataset with ground truth
 temp_data = dataprep(1)
-X_data_coords = temp_data.getCoords(xmin = 0.01, xmax = 0.99, ymin = 0.01, ymax = 0.99, tmin = 0.0555, num_x = 99, num_y = 99, num_t = 88)
+X_data_coords = temp_data.getCoords(
+    xmin=0.01,
+    xmax=0.99,
+    ymin=0.01,
+    ymax=0.99,
+    tmin=0.05,
+    num_x=99,
+    num_y=99,
+    num_t=96,
+)
 X_data = temp_data.getTemps(X_data_coords)
 X_dataset = tf.data.Dataset.from_tensor_slices(X_data)
 X_dataset_batch = X_dataset.shuffle(buffer_size=1000).take(N_data).batch(batch_size)
@@ -588,55 +633,65 @@ X_dataset_batch = X_dataset.shuffle(buffer_size=1000).take(N_data).batch(batch_s
 
 # Intitial Conditions dataset
 temp0_data = dataprep(1)
-X_0_coords = temp_data.getCoords(xmin = 0.01, xmax = 0.99, ymin = 0.01, ymax = 0.99, tmin = 0, num_x = 99, num_y = 99, num_t = 1)
+X_0_coords = temp_data.getCoords(
+    xmin=0.01, xmax=0.99, ymin=0.01, ymax=0.99, tmin=0, num_x=99, num_y=99, num_t=1
+)
 X_0 = temp_data.getTemps(X_0_coords)
 idx = np.random.randint(X_0.shape[0], size=N_initial)
-X_0 = X_0[idx,:]
+X_0 = X_0[idx, :]
 # X_0 = tf.data.Dataset.from_tensor_slices(X_0)
 # X_0 = X_0.shuffle(buffer_size=1000).take(N_initial).batch(batch_size)
 
 # Collocation Dataset
 lb = np.array([0, 0, 0])
-ub = np.array([4.88, 1, 1])
-X_colloc = lb + (ub-lb)*lhs(3, N_colloc)
+ub = np.array([4.85, 1, 1])
+X_colloc = lb + (ub - lb) * lhs(3, N_colloc)
 X_colloc = tf.data.Dataset.from_tensor_slices(X_colloc)
 X_colloc_batch = X_colloc.shuffle(buffer_size=1000).take(N_colloc).batch(batch_size)
 
 # Upper Lower Bundary Dataset
 tempul_data = dataprep(1)
-X_ul_coords = temp_data.getCoords(xmin = 0.01, xmax = 0.99, ymin = 0, ymax = 1, tmin = 0.0555, num_x = 99, num_y = 2, num_t = 88)
+X_ul_coords = temp_data.getCoords(
+    xmin=0.01, xmax=0.99, ymin=0, ymax=1, tmin=0.05, num_x=99, num_y=2, num_t=96
+)
 X_ul = temp_data.getTemps(X_ul_coords)
 idx = np.random.randint(X_ul.shape[0], size=N_boundary)
-X_ul = X_ul[idx,:]
+X_ul = X_ul[idx, :]
 # X_ul = tf.data.Dataset.from_tensor_slices(X_ul)
 # X_ul = X_ul.shuffle(buffer_size=1000).take(N_boundary)
 
 # Left right Boundary Dataset
 templr_data = dataprep(1)
-X_lr_coords = temp_data.getCoords(xmin = 0, xmax = 1, ymin = 0.01, ymax = 0.99, tmin = 0.0555, num_x = 2, num_y = 99, num_t = 88)
+X_lr_coords = temp_data.getCoords(
+    xmin=0, xmax=1, ymin=0.01, ymax=0.99, tmin=0.05, num_x=2, num_y=99, num_t=96
+)
 X_lr = temp_data.getTemps(X_lr_coords)
 idx = np.random.randint(X_lr.shape[0], size=N_boundary)
-X_lr = X_lr[idx,:]
+X_lr = X_lr[idx, :]
 # X_lr = tf.data.Dataset.from_tensor_slices(X_lr)
 # X_lr = X_lr.shuffle(buffer_size=1000).take(N_boundary)
 
-X_data_colloc_batch = tf.data.Dataset.zip((X_dataset_batch,X_colloc_batch))
+X_data_colloc_batch = tf.data.Dataset.zip((X_dataset_batch, X_colloc_batch))
 
 weights_data = []
 weights_colloc = []
-for i in range(int(N_colloc/batch_size)):
-    weights_data.append(tf.Variable(tf.random.uniform([batch_size, 1], dtype = 'float64')))
-    weights_colloc.append(tf.Variable(tf.random.uniform([batch_size, 1], dtype = 'float64')))
-weights_0 = tf.Variable(100*tf.random.uniform([N_initial, 1], dtype = 'float64'))
+for i in range(int(N_colloc / batch_size)):
+    weights_data.append(
+        tf.Variable(tf.random.uniform([batch_size, 1], dtype="float64"))
+    )
+    weights_colloc.append(
+        tf.Variable(tf.random.uniform([batch_size, 1], dtype="float64"))
+    )
+weights_0 = tf.Variable(100 * tf.random.uniform([N_initial, 1], dtype="float64"))
 
-weights_ulb = tf.Variable(tf.random.uniform([N_boundary, 1], dtype = 'float64'))
-weights_lrb = tf.Variable(tf.random.uniform([N_boundary, 1], dtype = 'float64'))
+weights_ulb = tf.Variable(tf.random.uniform([N_boundary, 1], dtype="float64"))
+weights_lrb = tf.Variable(tf.random.uniform([N_boundary, 1], dtype="float64"))
 tf_iter = 20000
 newton_iter = 0
 
 # %% Training PINN
 
-fit(    
+fit(
     X_data_colloc_batch,
     X_0,
     X_ul,

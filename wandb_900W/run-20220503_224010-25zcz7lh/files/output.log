@@ -1,0 +1,69 @@
+Starting ADAM training
+Restored from ./tf_ckpts\ckpt-307
+Epoch: 0
+  0/125 [..............................] - ETA: 0s
+C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\keras\optimizer_v2\optimizer_v2.py:375: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  "The `lr` argument is deprecated, use `learning_rate` instead.")
+
+  0/125 [..............................] - ETA: 0sTest error at epoch: 0 is 2287520
+Traceback (most recent call last):
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\texmanager.py", line 254, in _run_checked_subprocess
+    stderr=subprocess.STDOUT)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\subprocess.py", line 411, in check_output
+    **kwargs).stdout
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\subprocess.py", line 488, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "main.py", line 746, in <module>
+    newton_iter,
+  File "main.py", line 429, in fit
+    plt.savefig("pred_" + str(epoch) + ".png")
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\pyplot.py", line 966, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\figure.py", line 3005, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\backends\backend_qt5agg.py", line 78, in print_figure
+    super().print_figure(*args, **kwargs)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\backend_bases.py", line 2261, in print_figure
+    **kwargs)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\backend_bases.py", line 1669, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\backends\backend_agg.py", line 508, in print_png
+    FigureCanvasAgg.draw(self)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\backends\backend_agg.py", line 406, in draw
+    self.figure.draw(self.renderer)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\artist.py", line 74, in draw_wrapper
+    result = draw(artist, renderer, *args, **kwargs)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\artist.py", line 51, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\figure.py", line 2781, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\image.py", line 132, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\artist.py", line 51, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\_api\deprecation.py", line 431, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\axes\_base.py", line 2881, in draw
+    self._update_title_position(renderer)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\axes\_base.py", line 2822, in _update_title_position
+    if title.get_window_extent(renderer).ymin < top:
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\text.py", line 903, in get_window_extent
+    bbox, info, descent = self._get_layout(self._renderer)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\text.py", line 308, in _get_layout
+    ismath="TeX" if self.get_usetex() else False)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\backends\backend_agg.py", line 230, in get_text_width_height_descent
+    s, fontsize, renderer=self)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\texmanager.py", line 399, in get_text_width_height_descent
+    dvifile = self.make_dvi(tex, fontsize)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\texmanager.py", line 293, in make_dvi
+    texfile], tex, cwd=tmpdir)
+  File "C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\matplotlib\texmanager.py", line 258, in _run_checked_subprocess
+    'found'.format(command[0])) from exc
+RuntimeError: Failed to process string with tex because latex could not be found

@@ -1,0 +1,245 @@
+
+{"Dense": "type", "Input": "function", "Sequential": "type", "Struct": "type", "activations": "module", "builtins": "module", "get_ipython": "function", "get_weights": "function", "griddata": "function", "gridspec": "module", "i": "int", "interpolate": "module", "keras": "module", "layer_sizes": "list", "layers": "module", "lbfgs": "function", "lhs": "function", "make_axes_locatable": "function", "math": "module", "matplotlib": "module", "netCDF4": "module", "neural_net": "function", "newfig": "function", "np": "module", "os": "module", "plt": "module", "scipy": "module", "set_weights": "function", "site": "module", "sizes_b": "list", "sizes_w": "list", "sys": "module", "tf": "module", "time": "module", "u_model": "Sequential", "wandb": "module", "width": "int"}
+C:\Users\ganat\Anaconda3\envs\tf24\lib\site-packages\tensorflow\python\keras\optimizer_v2\optimizer_v2.py:375: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  "The `lr` argument is deprecated, use `learning_rate` instead.")
+Starting ADAM training
+Restored from ./tf_ckpts\ckpt-3312
+Epoch: 0
+
+  0/125 [..............................] - ETA: 0sWARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+
+
+
+  4/125 [..............................] - ETA: 8:44WARNING:tensorflow:5 out of the last 5 calls to <function grad at 0x0000014307EE38B8> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+  5/125 [>.............................] - ETA: 8:19WARNING:tensorflow:6 out of the last 6 calls to <function grad at 0x0000014307EE38B8> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 3sIt: 0, Time: 520.24
+mse_data: 3496708.034489095, mse_0: 3097179.9489578446, mse_colloc: 5.940591564425813e+16, mse_b: 40.02400343792548, Total Loss: 2.466247295329005e+16
+Saved checkpoint for step 3314: ./tf_ckpts\ckpt-3313
+Test error at epoch: 0 is 3914905
+Epoch: 1
+
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 1, Time: 19.84
+mse_data: 3501277.339600927, mse_0: 3095655.2114185668, mse_colloc: 1.3241280187957615e+19, mse_b: 38.789661734239516, Total Loss: 1.3147507428924461e+19
+Saved checkpoint for step 3315: ./tf_ckpts\ckpt-3314
+Epoch: 2
+
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 2, Time: 17.79
+mse_data: 3496562.814013607, mse_0: 3095237.0116556776, mse_colloc: 37662666776323.41, mse_b: 37.79550037584094, Total Loss: 18142021132249.734
+Saved checkpoint for step 3316: ./tf_ckpts\ckpt-3315
+Epoch: 3
+
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 3, Time: 18.50
+mse_data: 3493084.9079483035, mse_0: 3095109.803035604, mse_colloc: 37699836716765.125, mse_b: 37.03345752067467, Total Loss: 11872215052354.451
+Saved checkpoint for step 3317: ./tf_ckpts\ckpt-3316
+Epoch: 4
+
+
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 4, Time: 18.75
+mse_data: 3490215.1832681866, mse_0: 3095063.071816481, mse_colloc: 1.3240690213085862e+19, mse_b: 36.3470790358556, Total Loss: 1.8561981652483044e+18
+Saved checkpoint for step 3318: ./tf_ckpts\ckpt-3317
+Epoch: 5
+
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 5, Time: 18.85
+mse_data: 3496726.412162369, mse_0: 3095053.0577405784, mse_colloc: 37722080894150.78, mse_b: 35.68712739757745, Total Loss: 25787741116122.492
+Saved checkpoint for step 3319: ./tf_ckpts\ckpt-3318
+Epoch: 6
+
+
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 6, Time: 18.77
+mse_data: 3502201.222019138, mse_0: 3095035.384798701, mse_colloc: 37663584583889.68, mse_b: 35.02085794948123, Total Loss: 10684660425773.646
+Saved checkpoint for step 3320: ./tf_ckpts\ckpt-3319
+Epoch: 7
+
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 7, Time: 18.83
+mse_data: 3497597.1550116837, mse_0: 3095038.9297441337, mse_colloc: 5.940584747866364e+16, mse_b: 34.1546409523601, Total Loss: 3.3920820342380732e+16
+Saved checkpoint for step 3321: ./tf_ckpts\ckpt-3320
+Epoch: 8
+
+
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 8, Time: 18.65
+mse_data: 3493024.2409797236, mse_0: 3095053.6607595105, mse_colloc: 37638110298510.51, mse_b: 33.13744498807529, Total Loss: 7746210053246.252
+Saved checkpoint for step 3322: ./tf_ckpts\ckpt-3321
+Epoch: 9
+
+
+
+
+ 61/125 [=============>................] - ETA: 9s{"Dense": "type", "Input": "function", "N_boundary": "int", "N_colloc": "int", "N_data": "int", "N_initial": "int", "Sequential": "type", "Struct": "type", "X_0": "ndarray", "X_0_coords": "ndarray", "X_colloc": "TensorSliceDataset", "X_colloc_batch": "BatchDataset", "X_data": "ndarray", "X_data_colloc_batch": "ZipDataset", "X_data_coords": "ndarray", "X_dataset": "TensorSliceDataset", "X_dataset_batch": "BatchDataset", "X_lr": "ndarray", "X_lr_coords": "ndarray", "X_ul": "ndarray", "X_ul_coords": "ndarray", "activations": "module", "batch_size": "int", "builtins": "module", "dataprep": "type", "f_model": "Function", "fit": "function", "get_ipython": "function", "get_loss_and_flat_grad": "function", "get_weights": "function", "grad": "Function", "griddata": "function", "gridspec": "module", "i": "int", "idx": "ndarray", "interpolate": "module", "keras": "module", "layer_sizes": "list", "layers": "module", "lb": "ndarray", "lbfgs": "function", "lhs": "function", "loss": "function", "make_axes_locatable": "function", "math": "module", "matplotlib": "module", "netCDF4": "module", "neural_net": "function", "newfig": "function", "newton_iter": "int", "np": "module", "os": "module", "plt": "module", "predict": "function", "scipy": "module", "set_weights": "function", "site": "module", "sizes_b": "list", "sizes_w": "list", "sys": "module", "temp0_data": "dataprep", "temp_data": "dataprep", "templr_data": "dataprep", "tempul_data": "dataprep", "tf": "module", "tf_iter": "int", "time": "module", "u_derv_lrb_model": "Function", "u_derv_ulb_model": "Function", "u_model": "Sequential", "ub": "ndarray", "wandb": "module", "weights_0": "ResourceVariable", "weights_colloc": "list", "weights_data": "list", "weights_lrb": "ResourceVariable", "weights_ulb": "ResourceVariable", "width": "int"}
+{"Dense": "type", "Input": "function", "N_boundary": "int", "N_colloc": "int", "N_data": "int", "N_initial": "int", "Sequential": "type", "Struct": "type", "X_0": "ndarray", "X_0_coords": "ndarray", "X_colloc": "TensorSliceDataset", "X_colloc_batch": "BatchDataset", "X_data": "ndarray", "X_data_colloc_batch": "ZipDataset", "X_data_coords": "ndarray", "X_dataset": "TensorSliceDataset", "X_dataset_batch": "BatchDataset", "X_lr": "ndarray", "X_lr_coords": "ndarray", "X_ul": "ndarray", "X_ul_coords": "ndarray", "activations": "module", "batch_size": "int", "builtins": "module", "dataprep": "type", "f_model": "Function", "fit": "function", "get_ipython": "function", "get_loss_and_flat_grad": "function", "get_weights": "function", "grad": "Function", "griddata": "function", "gridspec": "module", "i": "int", "idx": "ndarray", "interpolate": "module", "keras": "module", "layer_sizes": "list", "layers": "module", "lb": "ndarray", "lbfgs": "function", "lhs": "function", "loss": "function", "make_axes_locatable": "function", "math": "module", "matplotlib": "module", "netCDF4": "module", "neural_net": "function", "newfig": "function", "newton_iter": "int", "np": "module", "os": "module", "plt": "module", "predict": "function", "scipy": "module", "set_weights": "function", "site": "module", "sizes_b": "list", "sizes_w": "list", "sys": "module", "temp0_data": "dataprep", "temp_data": "dataprep", "templr_data": "dataprep", "tempul_data": "dataprep", "tf": "module", "tf_iter": "int", "time": "module", "u_derv_lrb_model": "Function", "u_derv_ulb_model": "Function", "u_model": "Sequential", "ub": "ndarray", "wandb": "module", "weights_0": "ResourceVariable", "weights_colloc": "list", "weights_data": "list", "weights_lrb": "ResourceVariable", "weights_ulb": "ResourceVariable", "width": "int"}
+{"Dense": "type", "Input": "function", "N_boundary": "int", "N_colloc": "int", "N_data": "int", "N_initial": "int", "Sequential": "type", "Struct": "type", "T_test": "ndarray", "T_test_pred": "ndarray", "X_0": "ndarray", "X_0_coords": "ndarray", "X_colloc": "TensorSliceDataset", "X_colloc_batch": "BatchDataset", "X_data": "ndarray", "X_data_colloc_batch": "ZipDataset", "X_data_coords": "ndarray", "X_dataset": "TensorSliceDataset", "X_dataset_batch": "BatchDataset", "X_lr": "ndarray", "X_lr_coords": "ndarray", "X_test": "ndarray", "X_test_coords": "ndarray", "X_test_data": "dataprep", "X_ul": "ndarray", "X_ul_coords": "ndarray", "activations": "module", "batch_size": "int", "builtins": "module", "dataprep": "type", "f_model": "Function", "fit": "function", "get_ipython": "function", "get_loss_and_flat_grad": "function", "get_weights": "function", "grad": "Function", "griddata": "function", "gridspec": "module", "i": "int", "idx": "ndarray", "interpolate": "module", "keras": "module", "layer_sizes": "list", "layers": "module", "lb": "ndarray", "lbfgs": "function", "lhs": "function", "loss": "function", "make_axes_locatable": "function", "math": "module", "matplotlib": "module", "netCDF4": "module", "neural_net": "function", "newfig": "function", "newton_iter": "int", "np": "module", "os": "module", "plt": "module", "predict": "function", "scipy": "module", "set_weights": "function", "site": "module", "sizes_b": "list", "sizes_w": "list", "sys": "module", "t_test": "ndarray", "temp0_data": "dataprep", "temp_data": "dataprep", "templr_data": "dataprep", "tempul_data": "dataprep", "tf": "module", "tf_iter": "int", "time": "module", "u_derv_lrb_model": "Function", "u_derv_ulb_model": "Function", "u_model": "Sequential", "ub": "ndarray", "wandb": "module", "weights_0": "ResourceVariable", "weights_colloc": "list", "weights_data": "list", "weights_lrb": "ResourceVariable", "weights_ulb": "ResourceVariable", "width": "int", "x_test": "ndarray", "y_test": "ndarray"}
+{"Dense": "type", "Input": "function", "N_boundary": "int", "N_colloc": "int", "N_data": "int", "N_initial": "int", "Sequential": "type", "Struct": "type", "T_test": "ndarray", "T_test_pred": "ndarray", "X_0": "ndarray", "X_0_coords": "ndarray", "X_colloc": "TensorSliceDataset", "X_colloc_batch": "BatchDataset", "X_data": "ndarray", "X_data_colloc_batch": "ZipDataset", "X_data_coords": "ndarray", "X_dataset": "TensorSliceDataset", "X_dataset_batch": "BatchDataset", "X_lr": "ndarray", "X_lr_coords": "ndarray", "X_test": "ndarray", "X_test_coords": "ndarray", "X_test_data": "dataprep", "X_ul": "ndarray", "X_ul_coords": "ndarray", "activations": "module", "batch_size": "int", "builtins": "module", "dataprep": "type", "f_model": "Function", "fit": "function", "get_ipython": "function", "get_loss_and_flat_grad": "function", "get_weights": "function", "grad": "Function", "griddata": "function", "gridspec": "module", "i": "int", "idx": "ndarray", "interpolate": "module", "keras": "module", "layer_sizes": "list", "layers": "module", "lb": "ndarray", "lbfgs": "function", "lhs": "function", "loss": "function", "make_axes_locatable": "function", "math": "module", "matplotlib": "module", "netCDF4": "module", "neural_net": "function", "newfig": "function", "newton_iter": "int", "np": "module", "os": "module", "plt": "module", "predict": "function", "scipy": "module", "set_weights": "function", "site": "module", "sizes_b": "list", "sizes_w": "list", "sys": "module", "t_test": "ndarray", "temp0_data": "dataprep", "temp_data": "dataprep", "templr_data": "dataprep", "tempul_data": "dataprep", "tf": "module", "tf_iter": "int", "time": "module", "u_derv_lrb_model": "Function", "u_derv_ulb_model": "Function", "u_model": "Sequential", "ub": "ndarray", "wandb": "module", "weights_0": "ResourceVariable", "weights_colloc": "list", "weights_data": "list", "weights_lrb": "ResourceVariable", "weights_ulb": "ResourceVariable", "width": "int", "x_test": "ndarray", "y_test": "ndarray"}
+{"Dense": "type", "Input": "function", "N_boundary": "int", "N_colloc": "int", "N_data": "int", "N_initial": "int", "Sequential": "type", "Struct": "type", "T_test": "ndarray", "T_test_pred": "ndarray", "X_0": "ndarray", "X_0_coords": "ndarray", "X_colloc": "TensorSliceDataset", "X_colloc_batch": "BatchDataset", "X_data": "ndarray", "X_data_colloc_batch": "ZipDataset", "X_data_coords": "ndarray", "X_dataset": "TensorSliceDataset", "X_dataset_batch": "BatchDataset", "X_lr": "ndarray", "X_lr_coords": "ndarray", "X_test": "ndarray", "X_test_coords": "ndarray", "X_test_data": "dataprep", "X_ul": "ndarray", "X_ul_coords": "ndarray", "activations": "module", "batch_size": "int", "builtins": "module", "dataprep": "type", "f_model": "Function", "fit": "function", "get_ipython": "function", "get_loss_and_flat_grad": "function", "get_weights": "function", "grad": "Function", "griddata": "function", "gridspec": "module", "i": "int", "idx": "ndarray", "interpolate": "module", "keras": "module", "layer_sizes": "list", "layers": "module", "lb": "ndarray", "lbfgs": "function", "lhs": "function", "loss": "function", "make_axes_locatable": "function", "math": "module", "matplotlib": "module", "netCDF4": "module", "neural_net": "function", "newfig": "function", "newton_iter": "int", "np": "module", "os": "module", "plt": "module", "predict": "function", "scipy": "module", "set_weights": "function", "site": "module", "sizes_b": "list", "sizes_w": "list", "sys": "module", "t_test": "ndarray", "temp0_data": "dataprep", "temp_data": "dataprep", "templr_data": "dataprep", "tempul_data": "dataprep", "tf": "module", "tf_iter": "int", "time": "module", "u_derv_lrb_model": "Function", "u_derv_ulb_model": "Function", "u_model": "Sequential", "ub": "ndarray", "wandb": "module", "weights_0": "ResourceVariable", "weights_colloc": "list", "weights_data": "list", "weights_lrb": "ResourceVariable", "weights_ulb": "ResourceVariable", "width": "int", "x_test": "ndarray", "y_test": "ndarray"}

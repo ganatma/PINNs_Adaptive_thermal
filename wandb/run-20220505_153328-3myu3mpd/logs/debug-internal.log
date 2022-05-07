@@ -1,0 +1,1124 @@
+2022-05-05 15:33:34,789 INFO    MainThread:16312 [internal.py:wandb_internal():93] W&B internal server running at pid: 16312, started at: 2022-05-05 15:33:34.780053
+2022-05-05 15:33:34,794 INFO    WriterThread:16312 [datastore.py:open_for_write():75] open: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\run-3myu3mpd.wandb
+2022-05-05 15:33:34,799 DEBUG   SenderThread:16312 [sender.py:send():232] send: header
+2022-05-05 15:33:34,800 DEBUG   SenderThread:16312 [sender.py:send():232] send: run
+2022-05-05 15:33:35,374 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: check_version
+2022-05-05 15:33:35,404 INFO    SenderThread:16312 [dir_watcher.py:__init__():197] watching files in: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files
+2022-05-05 15:33:35,404 INFO    SenderThread:16312 [sender.py:_start_run_threads():814] run started: 3myu3mpd with start time 1651782809
+2022-05-05 15:33:35,404 DEBUG   SenderThread:16312 [sender.py:send():232] send: summary
+2022-05-05 15:33:35,405 INFO    SenderThread:16312 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-05 15:33:35,405 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: check_version
+2022-05-05 15:33:35,524 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: run_start
+2022-05-05 15:33:36,415 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_created():244] file/dir created: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\wandb-summary.json
+2022-05-05 15:33:39,900 DEBUG   HandlerThread:16312 [meta.py:__init__():35] meta init
+2022-05-05 15:33:39,900 DEBUG   HandlerThread:16312 [meta.py:__init__():49] meta init done
+2022-05-05 15:33:39,900 DEBUG   HandlerThread:16312 [meta.py:probe():209] probe
+2022-05-05 15:33:40,004 DEBUG   HandlerThread:16312 [meta.py:_setup_git():199] setup git
+2022-05-05 15:33:40,089 DEBUG   HandlerThread:16312 [meta.py:_setup_git():206] setup git done
+2022-05-05 15:33:40,089 DEBUG   HandlerThread:16312 [meta.py:_save_pip():53] save pip
+2022-05-05 15:33:40,090 DEBUG   HandlerThread:16312 [meta.py:_save_pip():67] save pip done
+2022-05-05 15:33:40,090 DEBUG   HandlerThread:16312 [meta.py:_save_conda():74] save conda
+2022-05-05 15:33:40,447 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_created():244] file/dir created: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\conda-environment.yaml
+2022-05-05 15:33:40,447 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_created():244] file/dir created: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\requirements.txt
+2022-05-05 15:33:41,452 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_created():244] file/dir created: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:33:43,462 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:33:51,520 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:33:53,216 DEBUG   HandlerThread:16312 [meta.py:_save_conda():84] save conda done
+2022-05-05 15:33:53,216 DEBUG   HandlerThread:16312 [meta.py:probe():247] probe done
+2022-05-05 15:33:53,226 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:33:53,226 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:33:53,233 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:33:53,235 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:33:53,423 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:33:53,423 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:33:53,425 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:33:53,425 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:33:53,476 DEBUG   SenderThread:16312 [sender.py:send():232] send: telemetry
+2022-05-05 15:33:53,560 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\conda-environment.yaml
+2022-05-05 15:33:53,561 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:33:53,561 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_created():244] file/dir created: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\wandb-metadata.json
+2022-05-05 15:33:53,596 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:33:53,596 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:33:53,610 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:33:53,610 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:33:53,798 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:33:53,798 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:33:53,799 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:33:53,799 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:33:54,006 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:33:54,006 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:33:54,007 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:33:54,007 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:33:54,172 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:33:54,173 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:33:54,174 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:33:54,174 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:33:54,367 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:33:54,367 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:33:54,368 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:33:54,368 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:33:54,681 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:33:54,682 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:33:54,686 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:33:54,686 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:33:54,949 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:33:54,950 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:33:54,952 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:33:54,953 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:33:55,146 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:33:55,147 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:33:55,147 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:33:55,147 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:33:55,362 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:33:55,363 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:33:55,363 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:33:55,364 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:33:55,546 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:33:55,546 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:33:55,548 DEBUG   SenderThread:16312 [sender.py:send():232] send: files
+2022-05-05 15:33:55,548 INFO    SenderThread:16312 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-05-05 15:33:55,550 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:33:55,550 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:33:55,551 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:33:55,552 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:33:55,552 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:33:55,553 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:33:55,554 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:33:55,555 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:33:55,614 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:33:55,615 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:33:55,616 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:33:56,168 INFO    Thread-28 :16312 [upload_job.py:push():132] Uploaded file C:\Users\ganat\AppData\Local\Temp\tmpqraydpacwandb\2zn3cztq-wandb-metadata.json
+2022-05-05 15:33:57,701 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:34:00,574 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:34:00,575 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:34:06,760 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\config.yaml
+2022-05-05 15:34:15,803 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:34:15,804 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:34:27,172 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:34:29,153 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:34:31,012 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:34:31,013 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:34:33,173 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:34:37,192 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:34:41,213 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:34:45,233 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:34:46,246 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:34:46,247 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:34:49,253 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:34:53,273 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:34:57,292 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:34:59,840 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:35:01,313 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:01,447 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:35:01,448 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:35:03,324 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:09,382 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:13,403 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:15,413 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:16,643 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:35:16,644 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:35:19,433 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:23,452 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:27,472 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:29,483 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:31,852 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:35:31,853 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:35:32,506 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:35:33,518 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:37,537 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:41,558 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:43,568 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:47,017 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:35:47,018 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:35:47,587 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:51,608 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:55,628 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:35:57,639 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:01,688 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:02,213 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:36:02,213 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:36:05,111 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:36:05,708 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:09,728 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:13,748 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:17,408 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:36:17,408 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:36:17,768 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:21,787 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:23,798 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:27,847 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:31,868 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:32,722 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:36:32,722 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:36:35,890 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:37,804 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:36:39,911 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:43,931 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:47,891 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:36:47,891 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:36:47,954 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:49,961 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:54,012 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:36:58,032 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:37:03,834 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:37:03,834 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:37:04,062 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:37:08,112 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:37:10,498 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:37:12,132 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:37:16,153 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:37:18,163 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:37:19,049 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:37:19,049 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:37:22,183 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:37:26,203 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:37:30,224 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:37:34,274 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:37:34,565 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:37:34,565 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:37:38,297 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:37:42,317 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:37:43,258 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:37:46,337 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:37:50,500 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:37:50,500 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:37:51,361 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:37:55,381 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:01,412 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:05,432 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:05,701 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:38:05,702 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:38:09,480 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:13,502 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:16,132 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:38:17,522 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:20,867 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:38:20,867 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:38:21,542 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:25,562 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:29,581 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:31,592 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:35,612 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:36,047 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:38:36,047 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:38:39,632 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:43,652 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:47,672 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:48,880 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:38:51,257 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:38:51,257 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:38:51,692 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:55,712 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:38:59,734 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:39:03,755 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:39:06,443 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:39:06,443 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:39:07,777 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:39:09,787 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:39:13,822 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:39:17,842 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:39:21,576 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:39:21,629 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:39:21,629 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:39:21,868 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:39:25,898 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:39:29,925 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:39:33,945 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:39:35,955 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:39:36,825 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:39:36,825 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:39:39,977 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:39:43,998 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:39:48,027 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:39:52,018 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:39:52,018 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:39:52,048 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:39:54,254 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:39:56,068 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:00,089 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:06,149 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:07,285 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:40:07,286 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:40:10,172 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:14,193 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:18,213 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:22,232 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:22,502 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:40:22,502 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:40:26,256 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:27,040 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:40:28,270 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:32,295 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:36,317 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:37,697 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:40:37,697 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:40:42,347 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:46,366 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:50,388 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:52,879 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:40:52,879 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:40:54,407 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:56,418 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:40:59,736 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:41:00,439 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:41:04,458 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:41:08,074 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:41:08,075 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:41:08,479 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:41:12,502 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:41:16,529 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:41:18,542 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:41:22,564 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:41:23,253 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:41:23,253 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:41:26,590 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:41:32,480 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:41:32,624 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:41:36,659 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:41:38,416 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:41:38,416 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:41:40,680 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:41:44,704 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:41:47,749 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:41:51,774 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:41:53,606 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:41:53,606 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:41:55,797 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:41:59,821 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:03,875 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:05,275 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:42:07,896 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:08,782 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:42:08,783 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:42:11,919 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:13,948 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:17,965 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:21,987 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:24,402 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:42:24,402 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:42:28,017 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:30,736 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: partial_history
+2022-05-05 15:42:30,754 DEBUG   SenderThread:16312 [sender.py:send():232] send: history
+2022-05-05 15:42:30,758 DEBUG   SenderThread:16312 [sender.py:send():232] send: summary
+2022-05-05 15:42:30,762 INFO    SenderThread:16312 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-05 15:42:31,035 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\wandb-summary.json
+2022-05-05 15:42:32,042 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:32,337 DEBUG   SenderThread:16312 [sender.py:send():232] send: files
+2022-05-05 15:42:32,337 INFO    SenderThread:16312 [sender.py:_save_file():948] saving file media\images\Prediction_1_094c9ab0085fff3fa4dd.png with policy now
+2022-05-05 15:42:32,337 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: partial_history
+2022-05-05 15:42:32,342 DEBUG   SenderThread:16312 [sender.py:send():232] send: history
+2022-05-05 15:42:32,342 DEBUG   SenderThread:16312 [sender.py:send():232] send: summary
+2022-05-05 15:42:32,343 INFO    SenderThread:16312 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-05 15:42:33,051 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\wandb-summary.json
+2022-05-05 15:42:33,052 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_created():244] file/dir created: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\media\images\Prediction_1_094c9ab0085fff3fa4dd.png
+2022-05-05 15:42:33,052 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_created():244] file/dir created: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\media
+2022-05-05 15:42:33,053 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_created():244] file/dir created: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\media\images
+2022-05-05 15:42:33,084 INFO    Thread-29 :16312 [upload_job.py:push():132] Uploaded file C:\Users\ganat\AppData\Local\Temp\tmpqraydpacwandb\3cjrp9sh-media/images/Prediction_1_094c9ab0085fff3fa4dd.png
+2022-05-05 15:42:34,058 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:36,067 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:38,079 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:38,275 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:42:39,577 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:42:39,578 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:42:40,089 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:42,098 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:44,109 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:46,119 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:48,129 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:50,139 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:50,847 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: partial_history
+2022-05-05 15:42:50,848 DEBUG   SenderThread:16312 [sender.py:send():232] send: history
+2022-05-05 15:42:50,848 DEBUG   SenderThread:16312 [sender.py:send():232] send: summary
+2022-05-05 15:42:50,849 INFO    SenderThread:16312 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-05 15:42:51,144 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\wandb-summary.json
+2022-05-05 15:42:52,149 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:54,159 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:54,758 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:42:54,758 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:42:56,169 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:42:58,180 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:00,190 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:02,200 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:04,216 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:06,235 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:08,246 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:08,894 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: partial_history
+2022-05-05 15:43:08,895 DEBUG   SenderThread:16312 [sender.py:send():232] send: history
+2022-05-05 15:43:08,895 DEBUG   SenderThread:16312 [sender.py:send():232] send: summary
+2022-05-05 15:43:08,896 INFO    SenderThread:16312 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-05 15:43:09,250 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\wandb-summary.json
+2022-05-05 15:43:09,985 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:43:09,985 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:43:10,255 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:11,187 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:43:12,265 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:14,276 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:16,287 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:18,296 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:20,306 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:22,316 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:24,338 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:25,165 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:43:25,166 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:43:26,351 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:27,655 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: partial_history
+2022-05-05 15:43:27,655 DEBUG   SenderThread:16312 [sender.py:send():232] send: history
+2022-05-05 15:43:27,656 DEBUG   SenderThread:16312 [sender.py:send():232] send: summary
+2022-05-05 15:43:27,657 INFO    SenderThread:16312 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-05 15:43:28,361 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:28,361 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\wandb-summary.json
+2022-05-05 15:43:30,371 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:32,381 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:34,393 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:36,401 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:38,412 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:40,361 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:43:40,362 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:43:40,422 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:42,432 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:44,249 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:43:44,444 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:46,453 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:46,667 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: partial_history
+2022-05-05 15:43:46,668 DEBUG   SenderThread:16312 [sender.py:send():232] send: history
+2022-05-05 15:43:46,668 DEBUG   SenderThread:16312 [sender.py:send():232] send: summary
+2022-05-05 15:43:46,669 INFO    SenderThread:16312 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-05 15:43:47,458 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\wandb-summary.json
+2022-05-05 15:43:48,464 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:50,474 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:52,484 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:54,494 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:55,528 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:43:55,529 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:43:56,504 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:43:58,514 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:00,555 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:02,565 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:04,574 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:05,791 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: partial_history
+2022-05-05 15:44:05,792 DEBUG   SenderThread:16312 [sender.py:send():232] send: history
+2022-05-05 15:44:05,792 DEBUG   SenderThread:16312 [sender.py:send():232] send: summary
+2022-05-05 15:44:05,793 INFO    SenderThread:16312 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-05 15:44:06,584 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:06,585 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\wandb-summary.json
+2022-05-05 15:44:08,595 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:10,605 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:10,694 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:44:10,695 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:44:12,616 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:14,626 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:16,637 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:17,308 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:44:18,647 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:20,656 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:22,711 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:24,737 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:24,829 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: partial_history
+2022-05-05 15:44:24,830 DEBUG   SenderThread:16312 [sender.py:send():232] send: history
+2022-05-05 15:44:24,830 DEBUG   SenderThread:16312 [sender.py:send():232] send: summary
+2022-05-05 15:44:24,831 INFO    SenderThread:16312 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-05 15:44:25,741 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\wandb-summary.json
+2022-05-05 15:44:25,875 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:44:25,876 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:44:26,746 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:28,756 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:30,766 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:32,776 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:34,787 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:36,797 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:38,809 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:40,818 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:41,132 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:44:41,133 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:44:42,829 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:43,903 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: partial_history
+2022-05-05 15:44:43,904 DEBUG   SenderThread:16312 [sender.py:send():232] send: history
+2022-05-05 15:44:43,904 DEBUG   SenderThread:16312 [sender.py:send():232] send: summary
+2022-05-05 15:44:43,905 INFO    SenderThread:16312 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-05 15:44:44,840 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:44,840 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\wandb-summary.json
+2022-05-05 15:44:46,848 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:48,859 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:50,249 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:44:50,868 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:52,878 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:54,888 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:56,313 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:44:56,313 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:44:56,898 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:44:58,945 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:45:00,964 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:45:02,793 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: partial_history
+2022-05-05 15:45:02,794 DEBUG   SenderThread:16312 [sender.py:send():232] send: history
+2022-05-05 15:45:02,794 DEBUG   SenderThread:16312 [sender.py:send():232] send: summary
+2022-05-05 15:45:02,795 INFO    SenderThread:16312 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-05 15:45:02,973 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:45:02,973 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\wandb-summary.json
+2022-05-05 15:45:04,982 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:45:06,992 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:45:09,002 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:45:11,016 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:45:11,491 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:45:11,492 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:45:12,270 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:45:12,270 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:45:12,346 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:45:13,025 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:45:25,442 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:45:25,442 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:45:25,443 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:45:25,443 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:45:25,587 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:45:26,257 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:45:26,257 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:45:26,258 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:45:26,258 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:45:26,379 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:45:26,675 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:45:26,676 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:45:27,144 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 15:45:40,548 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:45:40,548 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:45:40,704 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:45:40,704 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:45:40,795 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:45:41,836 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:45:41,836 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:45:44,764 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:45:44,764 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:45:44,810 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:45:44,810 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:45:44,895 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:45:50,722 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:45:50,722 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:45:50,727 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:45:50,727 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:45:50,857 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:45:57,008 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:45:57,008 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:46:00,963 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:46:00,963 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:46:00,965 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:46:00,965 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:46:01,116 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:46:12,179 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:46:12,180 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:46:15,611 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:46:15,611 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:46:15,749 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:46:15,749 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:46:15,842 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:46:20,511 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 15:46:20,511 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 15:46:20,513 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 15:46:20,514 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 15:46:20,648 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 15:46:27,401 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:46:27,402 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:46:42,594 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:46:42,594 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:46:57,808 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:46:57,808 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:47:13,000 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:47:13,000 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:47:28,167 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:47:28,167 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:47:43,359 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:47:43,360 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:47:58,549 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:47:58,550 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:48:13,737 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:48:13,737 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:48:28,955 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:48:28,956 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:48:44,145 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:48:44,145 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:48:59,589 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:48:59,589 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:49:14,781 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:49:14,782 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:49:29,970 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:49:29,971 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:49:45,131 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:49:45,132 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:50:00,325 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:50:00,325 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:50:15,503 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:50:15,503 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:50:30,669 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:50:30,670 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:50:45,843 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:50:45,844 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:51:01,099 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:51:01,099 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:51:16,257 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:51:16,258 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:51:31,647 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:51:31,647 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:51:46,806 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:51:46,807 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:52:02,061 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:52:02,062 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:52:17,280 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:52:17,281 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:52:32,448 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:52:32,448 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:52:47,604 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:52:47,605 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:53:02,784 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:53:02,785 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:53:18,135 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:53:18,136 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:53:33,319 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:53:33,320 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:53:48,534 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:53:48,534 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:54:03,699 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:54:03,699 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:54:18,882 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:54:18,882 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:54:34,076 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:54:34,076 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:54:49,422 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:54:49,422 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:55:04,587 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:55:04,588 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:55:19,747 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:55:19,748 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:55:35,707 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:55:35,707 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:55:50,869 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:55:50,870 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:56:06,235 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:56:06,235 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:56:21,409 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:56:21,409 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:56:36,696 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:56:36,696 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:56:51,924 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:56:51,925 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:57:07,116 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:57:07,117 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:57:22,286 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:57:22,287 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:57:37,486 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:57:37,487 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:57:52,699 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:57:52,700 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:58:07,899 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:58:07,900 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:58:23,108 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:58:23,109 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:58:38,293 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:58:38,293 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:58:53,460 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:58:53,461 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:59:08,629 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:59:08,630 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:59:23,805 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:59:23,806 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:59:39,015 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:59:39,016 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 15:59:54,168 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 15:59:54,169 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:00:09,331 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:00:09,332 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:00:24,502 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:00:24,502 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:00:39,694 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:00:39,694 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:00:54,878 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:00:54,878 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:01:10,090 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:01:10,090 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:01:25,605 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:01:25,606 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:01:40,786 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:01:40,786 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:01:56,467 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:01:56,468 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:02:11,662 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:02:11,662 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:02:26,848 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:02:26,848 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:02:42,034 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:02:42,034 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:02:57,197 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:02:57,197 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:03:12,381 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:03:12,381 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:03:27,611 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:03:27,612 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:03:42,795 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:03:42,795 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:03:58,120 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:03:58,121 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:04:13,328 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:04:13,328 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:04:28,498 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:04:28,499 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:04:43,689 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:04:43,689 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:04:58,872 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:04:58,873 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:05:14,035 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:05:14,036 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:05:29,275 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:05:29,275 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:05:44,439 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:05:44,440 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:05:59,632 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:05:59,633 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:06:14,831 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:06:14,831 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:06:30,023 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:06:30,023 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:06:45,191 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:06:45,192 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:07:00,390 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:07:00,391 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:07:15,737 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:07:15,737 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:07:30,929 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:07:30,929 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:07:46,107 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:07:46,107 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:08:01,268 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:08:01,268 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:08:16,472 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:08:16,473 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:08:31,747 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:08:31,748 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:08:46,944 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:08:46,945 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:09:02,135 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:09:02,135 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:09:17,298 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:09:17,298 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:09:32,592 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:09:32,593 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:09:47,775 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:09:47,775 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:10:02,969 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:10:02,970 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:10:18,161 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:10:18,162 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:10:33,887 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:10:33,887 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:10:49,077 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:10:49,078 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:11:04,265 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:11:04,266 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:11:19,440 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:11:19,441 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:11:34,635 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:11:34,636 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:11:49,840 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:11:49,841 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:12:05,033 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:12:05,033 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:12:20,215 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:12:20,216 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:12:35,422 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:12:35,423 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:12:50,610 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:12:50,611 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:13:05,789 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:13:05,789 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:13:20,944 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:13:20,944 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:13:36,141 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:13:36,142 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:13:51,342 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:13:51,342 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:14:06,518 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:14:06,518 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:14:21,706 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:14:21,707 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:14:36,864 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:14:36,864 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:14:52,025 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:14:52,025 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:15:07,207 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:15:07,207 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:15:22,377 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:15:22,378 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:15:37,584 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:15:37,585 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:15:52,776 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:15:52,777 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:16:07,942 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:16:07,942 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:16:23,131 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:16:23,132 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:16:38,301 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:16:38,302 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:16:53,493 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:16:53,493 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:17:08,732 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:17:08,733 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:17:23,938 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:17:23,939 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:17:39,118 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:17:39,119 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:17:54,307 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:17:54,307 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:18:09,486 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:18:09,487 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:18:24,683 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:18:24,684 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:18:39,856 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:18:39,857 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:18:55,037 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:18:55,038 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:19:10,336 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:19:10,336 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:19:25,527 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:19:25,527 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:19:40,709 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:19:40,709 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:19:56,203 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:19:56,203 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:20:11,420 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:20:11,421 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:20:26,627 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:20:26,627 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:20:41,797 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:20:41,797 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:20:56,992 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:20:56,992 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:21:12,185 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:21:12,185 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:21:32,203 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:21:32,203 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:21:47,390 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:21:47,390 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:22:02,587 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:22:02,587 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:22:17,764 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:22:17,764 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:22:33,080 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:22:33,080 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:22:48,260 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:22:48,260 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:23:03,416 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:23:03,416 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:23:18,610 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:23:18,611 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:23:33,984 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:23:33,985 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:23:49,158 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:23:49,159 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:24:04,341 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:24:04,342 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:24:19,535 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:24:19,535 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:24:34,713 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:24:34,714 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:24:49,898 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:24:49,899 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:25:05,893 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:25:05,893 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:25:21,094 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:25:21,094 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:25:36,335 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:25:36,336 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:25:51,559 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:25:51,559 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:26:06,784 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:26:06,785 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:26:21,963 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:26:21,963 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:26:37,235 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:26:37,235 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:26:52,429 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:26:52,430 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:27:07,596 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:27:07,597 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:27:22,767 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:27:22,768 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:27:37,961 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:27:37,961 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:27:53,144 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:27:53,144 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:28:08,332 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:28:08,332 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:28:23,599 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:28:23,600 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:28:38,795 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:28:38,796 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:28:54,002 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:28:54,002 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:29:00,165 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 16:29:00,165 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 16:29:00,168 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 16:29:00,168 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 16:29:00,313 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 16:29:00,465 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 16:29:00,466 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 16:29:00,467 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 16:29:00,467 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 16:29:00,607 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 16:29:01,473 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 16:29:01,473 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 16:29:01,475 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 16:29:01,475 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 16:29:01,590 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 16:29:03,489 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 16:29:03,501 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: resume
+2022-05-05 16:29:03,501 INFO    HandlerThread:16312 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-05 16:29:03,503 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: pause
+2022-05-05 16:29:03,503 INFO    HandlerThread:16312 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-05 16:29:03,608 DEBUG   SenderThread:16312 [sender.py:send():232] send: stats
+2022-05-05 16:29:05,500 INFO    Thread-11 :16312 [dir_watcher.py:_on_file_modified():257] file/dir modified: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 16:29:09,199 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:29:09,199 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:29:24,382 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:29:24,383 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:29:39,552 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:29:39,552 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:29:54,739 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:29:54,740 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:30:09,947 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:30:09,947 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:30:25,155 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:30:25,155 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:30:40,370 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:30:40,371 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:30:55,573 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:30:55,573 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:31:10,773 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:31:10,773 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:31:25,954 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:31:25,955 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:31:41,146 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:31:41,146 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:31:56,354 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:31:56,355 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:32:11,538 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:32:11,539 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:32:26,713 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:32:26,714 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:32:41,917 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:32:41,918 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:32:57,103 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:32:57,103 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:33:12,333 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:33:12,333 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:33:27,534 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:33:27,535 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:33:42,766 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:33:42,766 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:33:57,970 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:33:57,970 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:34:13,198 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:34:13,198 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:34:28,382 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:34:28,383 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:34:43,540 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:34:43,540 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:34:58,732 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:34:58,732 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:35:13,920 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:35:13,920 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:35:29,101 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:35:29,102 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:35:44,327 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:35:44,328 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:35:59,612 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:35:59,612 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:36:14,818 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:36:14,818 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:36:30,014 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:36:30,015 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:36:45,212 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:36:45,212 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:37:00,409 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:37:00,409 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:37:15,592 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:37:15,592 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:37:30,778 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:37:30,778 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:37:46,017 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:37:46,017 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:38:01,206 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:38:01,206 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:38:16,385 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:38:16,386 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:38:31,624 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:38:31,625 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:38:46,785 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:38:46,786 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:39:01,975 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:39:01,976 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:39:17,153 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:39:17,153 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:39:32,546 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:39:32,547 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:39:47,711 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:39:47,712 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:40:05,062 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:40:05,062 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:40:20,264 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:40:20,264 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:40:35,453 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:40:35,453 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:40:50,689 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:40:50,689 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:41:05,877 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:41:05,878 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:41:21,037 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:41:21,038 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:41:36,469 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:41:36,470 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:41:51,662 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:41:51,663 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:42:06,900 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:42:06,901 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:42:22,093 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:42:22,094 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:42:37,738 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:42:37,739 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:42:52,930 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:42:52,931 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:43:08,151 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:43:08,151 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:43:23,361 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:43:23,362 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:43:38,554 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:43:38,554 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:43:53,768 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:43:53,769 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:44:08,961 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:44:08,961 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:44:24,128 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:44:24,128 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:44:39,350 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:44:39,351 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:44:54,571 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:44:54,571 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:45:09,760 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:45:09,761 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:45:24,929 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:45:24,929 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:45:40,113 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:45:40,114 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:45:55,295 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:45:55,295 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:46:10,459 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:46:10,460 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:46:25,656 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:46:25,657 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:46:40,842 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:46:40,843 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:46:56,029 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:46:56,030 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:47:11,211 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:47:11,211 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:47:26,397 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:47:26,397 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:47:41,584 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:47:41,584 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:47:56,773 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:47:56,773 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:48:11,987 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:48:11,988 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:48:27,166 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:48:27,166 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:48:42,363 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:48:42,363 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:48:57,585 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:48:57,586 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:49:12,778 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:49:12,778 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:49:27,973 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:49:27,973 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:49:43,152 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:49:43,153 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:49:58,363 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:49:58,364 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:50:13,579 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:50:13,580 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:50:28,753 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:50:28,754 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:50:43,948 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:50:43,948 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:50:59,166 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:50:59,166 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:51:14,338 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:51:14,339 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:51:29,514 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:51:29,514 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:51:44,710 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:51:44,711 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:51:59,870 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:51:59,871 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:52:15,052 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:52:15,053 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:52:30,223 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:52:30,223 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:52:45,405 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:52:45,406 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:53:00,584 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:53:00,585 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:53:15,885 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:53:15,886 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:53:31,088 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:53:31,089 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:53:46,279 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:53:46,280 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:54:01,478 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:54:01,478 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:54:16,699 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:54:16,699 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:54:31,941 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:54:31,941 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:54:47,119 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:54:47,120 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:55:02,326 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:55:02,327 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:55:22,334 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:55:22,334 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:55:37,519 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:55:37,520 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:55:52,717 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:55:52,718 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:56:07,904 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:56:07,905 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:56:23,110 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:56:23,110 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:56:38,305 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:56:38,305 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:56:53,504 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:56:53,505 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:57:08,710 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:57:08,710 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:57:23,962 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:57:23,962 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:57:39,173 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:57:39,173 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:57:54,343 DEBUG   HandlerThread:16312 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-05 16:57:54,344 DEBUG   SenderThread:16312 [sender.py:send_request():246] send_request: stop_status
+2022-05-05 16:58:16,086 WARNING MainThread:16312 [internal.py:is_dead():388] Internal process exiting, parent pid 81632 disappeared
+2022-05-05 16:58:16,088 ERROR   MainThread:16312 [internal.py:wandb_internal():149] Internal process shutdown.
+2022-05-05 16:58:16,361 INFO    WriterThread:16312 [datastore.py:close():279] close: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\run-3myu3mpd.wandb
+2022-05-05 16:58:16,630 INFO    SenderThread:16312 [sender.py:finish():1110] shutting down sender
+2022-05-05 16:58:16,631 INFO    SenderThread:16312 [dir_watcher.py:finish():312] shutting down directory watcher
+2022-05-05 16:58:16,633 INFO    HandlerThread:16312 [handler.py:finish():806] shutting down handler
+2022-05-05 16:58:17,144 INFO    SenderThread:16312 [dir_watcher.py:finish():342] scan: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files
+2022-05-05 16:58:17,146 INFO    SenderThread:16312 [dir_watcher.py:finish():356] scan save: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\conda-environment.yaml conda-environment.yaml
+2022-05-05 16:58:17,146 INFO    SenderThread:16312 [dir_watcher.py:finish():356] scan save: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\config.yaml config.yaml
+2022-05-05 16:58:17,147 INFO    SenderThread:16312 [dir_watcher.py:finish():356] scan save: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log output.log
+2022-05-05 16:58:17,148 INFO    SenderThread:16312 [dir_watcher.py:finish():356] scan save: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\requirements.txt requirements.txt
+2022-05-05 16:58:17,156 INFO    SenderThread:16312 [dir_watcher.py:finish():356] scan save: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\wandb-metadata.json wandb-metadata.json
+2022-05-05 16:58:17,157 INFO    SenderThread:16312 [dir_watcher.py:finish():356] scan save: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\wandb-summary.json wandb-summary.json
+2022-05-05 16:58:17,163 INFO    SenderThread:16312 [dir_watcher.py:finish():356] scan save: c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\media\images\Prediction_1_094c9ab0085fff3fa4dd.png media\images\Prediction_1_094c9ab0085fff3fa4dd.png
+2022-05-05 16:58:17,164 INFO    SenderThread:16312 [file_pusher.py:finish():145] shutting down file pusher
+2022-05-05 16:58:17,165 INFO    SenderThread:16312 [file_pusher.py:join():150] waiting for file pusher
+2022-05-05 16:58:17,724 INFO    Thread-46 :16312 [upload_job.py:push():132] Uploaded file c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\wandb-summary.json
+2022-05-05 16:58:17,745 INFO    Thread-42 :16312 [upload_job.py:push():132] Uploaded file c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\conda-environment.yaml
+2022-05-05 16:58:17,788 INFO    Thread-44 :16312 [upload_job.py:push():132] Uploaded file c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\output.log
+2022-05-05 16:58:17,788 INFO    Thread-45 :16312 [upload_job.py:push():132] Uploaded file c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\requirements.txt
+2022-05-05 16:58:17,797 INFO    Thread-43 :16312 [upload_job.py:push():132] Uploaded file c:\Research\PINNs_Adaptive_thermal\wandb\run-20220505_153328-3myu3mpd\files\config.yaml
+2022-05-05 16:58:18,499 INFO    MainThread:16312 [internal.py:handle_exit():80] Internal process exited
