@@ -1,0 +1,117 @@
+Starting ADAM training
+Restored from ./tf_ckpts\ckpt-3322
+Epoch: 0
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 0, Time: 16.58
+mse_data: 3491819.910409299, mse_0: 3094873.472344043, mse_colloc: 1.000357819316449e+20, mse_b: 33.377513916418856, Total Loss: 7.062532907939722e+19
+Saved checkpoint for step 3324: ./tf_ckpts\ckpt-3323
+Test error at epoch: 0 is 3912696
+Epoch: 1
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 1, Time: 17.08
+mse_data: 3491604.219081944, mse_0: 3094741.2404217278, mse_colloc: 3.1578392423894625e+18, mse_b: 33.200209143987095, Total Loss: 2.8413996987705926e+17
+Saved checkpoint for step 3325: ./tf_ckpts\ckpt-3324
+Epoch: 2
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 2, Time: 16.29
+mse_data: 3485367.4858006453, mse_0: 3094564.294763715, mse_colloc: 1.2034702636104136e+17, mse_b: 33.170859626609584, Total Loss: 2.1319444940514096e+16
+Saved checkpoint for step 3326: ./tf_ckpts\ckpt-3325
+Epoch: 3
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 3, Time: 16.78
+mse_data: 3483193.863231472, mse_0: 3094296.8480506777, mse_colloc: 1.0003579477364287e+20, mse_b: 33.81664074025669, Total Loss: 5.536394235075438e+16
+Saved checkpoint for step 3327: ./tf_ckpts\ckpt-3326
+Epoch: 4
+
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 4, Time: 17.24
+mse_data: 3494521.714541368, mse_0: 3094017.3232882204, mse_colloc: 1.000028147917122e+20, mse_b: 34.650794898081244, Total Loss: 1.9933797598978466e+19
+Saved checkpoint for step 3328: ./tf_ckpts\ckpt-3327
+Epoch: 5
+
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 5, Time: 17.33
+mse_data: 3503365.292087639, mse_0: 3093729.0859511252, mse_colloc: 1.2034693363988968e+17, mse_b: 35.70290250272541, Total Loss: 4731241109256778.0
+Saved checkpoint for step 3329: ./tf_ckpts\ckpt-3328
+Epoch: 6
+
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 6, Time: 17.46
+mse_data: 3490448.8460644516, mse_0: 3093443.0886330195, mse_colloc: 1.0003581081188398e+20, mse_b: 37.16533344979685, Total Loss: 8.492765621369346e+19
+Saved checkpoint for step 3330: ./tf_ckpts\ckpt-3329
+Epoch: 7
+
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 7, Time: 17.61
+mse_data: 3494774.3048529276, mse_0: 3093305.0245238366, mse_colloc: 8.673114071339792e+16, mse_b: 38.316889230960165, Total Loss: 1.0469132740688972e+16
+Saved checkpoint for step 3331: ./tf_ckpts\ckpt-3330
+Epoch: 8
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 8, Time: 17.93
+mse_data: 3489045.147625057, mse_0: 3096672.303487762, mse_colloc: 3.157835343711064e+18, mse_b: 51.56829084678088, Total Loss: 6.699238285574999e+17
+Saved checkpoint for step 3332: ./tf_ckpts\ckpt-3331
+Epoch: 9
+
+
+
+
+
+
+
+
+124/125 [============================>.] - ETA: 0sIt: 9, Time: 17.81
+mse_data: 3507617.556252278, mse_0: 3097617.621833477, mse_colloc: 1.0307332690968578e+20, mse_b: 67.57806638289861, Total Loss: 3.630770818622262e+19
