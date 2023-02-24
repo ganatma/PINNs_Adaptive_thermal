@@ -8,7 +8,7 @@ import time
 import scipy.io
 import math
 import matplotlib.gridspec as gridspec
-from plotting import newfig
+#from plotting import newfig
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from tensorflow import keras
 from tensorflow.keras.models import Sequential
@@ -651,9 +651,7 @@ X_colloc_batch = X_colloc.shuffle(buffer_size=1000).take(N_colloc).batch(batch_s
 
 # Upper Lower Bundary Dataset
 tempul_data = dataprep(1)
-X_ul_coords = temp_data.getCoords(
-    xmin=0.01, xmax=0.99, ymin=0, ymax=1, tmin=0.05, num_x=99, num_y=2, num_t=96
-)
+X_ul_coords = temp_data.getCoords(xmin=0.01, xmax=0.99, ymin=0, ymax=1, tmin=0.05, num_x=99, num_y=2, num_t=96)
 X_ul = temp_data.getTemps(X_ul_coords)
 idx = np.random.randint(X_ul.shape[0], size=N_boundary)
 X_ul = X_ul[idx, :]
@@ -662,9 +660,7 @@ X_ul = X_ul[idx, :]
 
 # Left right Boundary Dataset
 templr_data = dataprep(1)
-X_lr_coords = temp_data.getCoords(
-    xmin=0, xmax=1, ymin=0.01, ymax=0.99, tmin=0.05, num_x=2, num_y=99, num_t=96
-)
+X_lr_coords = temp_data.getCoords(xmin=0, xmax=1, ymin=0.01, ymax=0.99, tmin=0.05, num_x=2, num_y=99, num_t=96)
 X_lr = temp_data.getTemps(X_lr_coords)
 idx = np.random.randint(X_lr.shape[0], size=N_boundary)
 X_lr = X_lr[idx, :]
