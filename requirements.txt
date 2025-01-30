@@ -1,0 +1,10 @@
+# Core dependencies
+tensorflow==2.15.1
+numpy==1.26.4
+matplotlib==3.8.3
+scikit-learn==1.4.1.post1
+pandas==2.2.1
+protobuf==3.20.3
+
+# MOOSE framework (Note: MOOSE typically requires separate installation from source)
+# See https://mooseframework.org/ for installation instructions 
